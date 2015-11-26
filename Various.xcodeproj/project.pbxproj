@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FDA74C161C0699EC00C72D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C151C0699EC00C72D4E /* main.m */; };
-		FDA74C191C0699EC00C72D4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C181C0699EC00C72D4E /* AppDelegate.m */; };
-		FDA74C1C1C0699EC00C72D4E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C1B1C0699EC00C72D4E /* FirstViewController.m */; };
-		FDA74C1F1C0699EC00C72D4E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C1E1C0699EC00C72D4E /* SecondViewController.m */; };
-		FDA74C221C0699EC00C72D4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA74C201C0699EC00C72D4E /* Main.storyboard */; };
-		FDA74C241C0699EC00C72D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA74C231C0699EC00C72D4E /* Assets.xcassets */; };
-		FDA74C271C0699EC00C72D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA74C251C0699EC00C72D4E /* LaunchScreen.storyboard */; };
+		77FB3EEC6C2365A4B62D8B23 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A700AD0673CA6F18777B9 /* libPods.a */; };
 		FDA74C321C0699ED00C72D4E /* VariousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C311C0699ED00C72D4E /* VariousTests.m */; };
 		FDA74C3D1C0699ED00C72D4E /* VariousUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C3C1C0699ED00C72D4E /* VariousUITests.m */; };
+		FDA74C5A1C069B6500C72D4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C511C069B6500C72D4E /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		FDA74C5B1C069B6500C72D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA74C521C069B6500C72D4E /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		FDA74C5C1C069B6500C72D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA74C531C069B6500C72D4E /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		FDA74C5D1C069B6500C72D4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA74C551C069B6500C72D4E /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		FDA74C5E1C069B6500C72D4E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDA74C571C069B6500C72D4E /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		FDA74C5F1C069B6500C72D4E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C581C069B6500C72D4E /* main.m */; settings = {ASSET_TAGS = (); }; };
+		FDA74C631C069E4400C72D4E /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C621C069E4400C72D4E /* SearchViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FDA74C661C069E6200C72D4E /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C651C069E6200C72D4E /* SearchTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,24 +38,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		143D1289DF492F37F11C6BD9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BC30FBF7877E4097940F6FD0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		ED9A700AD0673CA6F18777B9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C111C0699EC00C72D4E /* Various.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Various.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDA74C151C0699EC00C72D4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FDA74C171C0699EC00C72D4E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FDA74C181C0699EC00C72D4E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FDA74C1A1C0699EC00C72D4E /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		FDA74C1B1C0699EC00C72D4E /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		FDA74C1D1C0699EC00C72D4E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		FDA74C1E1C0699EC00C72D4E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		FDA74C211C0699EC00C72D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FDA74C231C0699EC00C72D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FDA74C261C0699EC00C72D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FDA74C281C0699EC00C72D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDA74C2D1C0699ED00C72D4E /* VariousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VariousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C311C0699ED00C72D4E /* VariousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariousTests.m; sourceTree = "<group>"; };
 		FDA74C331C0699ED00C72D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDA74C381C0699ED00C72D4E /* VariousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VariousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C3C1C0699ED00C72D4E /* VariousUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariousUITests.m; sourceTree = "<group>"; };
 		FDA74C3E1C0699ED00C72D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA74C501C069B6500C72D4E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FDA74C511C069B6500C72D4E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FDA74C521C069B6500C72D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDA74C541C069B6500C72D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDA74C561C069B6500C72D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDA74C571C069B6500C72D4E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA74C581C069B6500C72D4E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FDA74C611C069E4400C72D4E /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		FDA74C621C069E4400C72D4E /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		FDA74C641C069E6200C72D4E /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		FDA74C651C069E6200C72D4E /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77FB3EEC6C2365A4B62D8B23 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,13 +87,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A592734EC8694885A3FA5AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				143D1289DF492F37F11C6BD9 /* Pods.debug.xcconfig */,
+				BC30FBF7877E4097940F6FD0 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1718FB0FC7E9410D237E8015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED9A700AD0673CA6F18777B9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FDA74C081C0699EC00C72D4E = {
 			isa = PBXGroup;
 			children = (
-				FDA74C131C0699EC00C72D4E /* Various */,
+				FDA74C4A1C069B6500C72D4E /* Various */,
 				FDA74C301C0699ED00C72D4E /* VariousTests */,
 				FDA74C3B1C0699ED00C72D4E /* VariousUITests */,
 				FDA74C121C0699EC00C72D4E /* Products */,
+				0A592734EC8694885A3FA5AE /* Pods */,
+				1718FB0FC7E9410D237E8015 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,32 +124,6 @@
 				FDA74C381C0699ED00C72D4E /* VariousUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		FDA74C131C0699EC00C72D4E /* Various */ = {
-			isa = PBXGroup;
-			children = (
-				FDA74C171C0699EC00C72D4E /* AppDelegate.h */,
-				FDA74C181C0699EC00C72D4E /* AppDelegate.m */,
-				FDA74C1A1C0699EC00C72D4E /* FirstViewController.h */,
-				FDA74C1B1C0699EC00C72D4E /* FirstViewController.m */,
-				FDA74C1D1C0699EC00C72D4E /* SecondViewController.h */,
-				FDA74C1E1C0699EC00C72D4E /* SecondViewController.m */,
-				FDA74C201C0699EC00C72D4E /* Main.storyboard */,
-				FDA74C231C0699EC00C72D4E /* Assets.xcassets */,
-				FDA74C251C0699EC00C72D4E /* LaunchScreen.storyboard */,
-				FDA74C281C0699EC00C72D4E /* Info.plist */,
-				FDA74C141C0699EC00C72D4E /* Supporting Files */,
-			);
-			path = Various;
-			sourceTree = "<group>";
-		};
-		FDA74C141C0699EC00C72D4E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FDA74C151C0699EC00C72D4E /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FDA74C301C0699ED00C72D4E /* VariousTests */ = {
@@ -145,6 +144,80 @@
 			path = VariousUITests;
 			sourceTree = "<group>";
 		};
+		FDA74C4A1C069B6500C72D4E /* Various */ = {
+			isa = PBXGroup;
+			children = (
+				FDA74C4B1C069B6500C72D4E /* extension */,
+				FDA74C4C1C069B6500C72D4E /* model */,
+				FDA74C4D1C069B6500C72D4E /* res */,
+				FDA74C4F1C069B6500C72D4E /* supporting files */,
+				FDA74C591C069B6500C72D4E /* vc */,
+			);
+			path = Various;
+			sourceTree = "<group>";
+		};
+		FDA74C4B1C069B6500C72D4E /* extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		FDA74C4C1C069B6500C72D4E /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FDA74C4D1C069B6500C72D4E /* res */ = {
+			isa = PBXGroup;
+			children = (
+				FDA74C4E1C069B6500C72D4E /* img */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		FDA74C4E1C069B6500C72D4E /* img */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		FDA74C4F1C069B6500C72D4E /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FDA74C501C069B6500C72D4E /* AppDelegate.h */,
+				FDA74C511C069B6500C72D4E /* AppDelegate.m */,
+				FDA74C521C069B6500C72D4E /* Assets.xcassets */,
+				FDA74C531C069B6500C72D4E /* LaunchScreen.storyboard */,
+				FDA74C551C069B6500C72D4E /* Main.storyboard */,
+				FDA74C571C069B6500C72D4E /* Info.plist */,
+				FDA74C581C069B6500C72D4E /* main.m */,
+			);
+			path = "supporting files";
+			sourceTree = "<group>";
+		};
+		FDA74C591C069B6500C72D4E /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				FDA74C601C069BF400C72D4E /* search */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		FDA74C601C069BF400C72D4E /* search */ = {
+			isa = PBXGroup;
+			children = (
+				FDA74C611C069E4400C72D4E /* SearchViewController.h */,
+				FDA74C621C069E4400C72D4E /* SearchViewController.m */,
+				FDA74C641C069E6200C72D4E /* SearchTableViewCell.h */,
+				FDA74C651C069E6200C72D4E /* SearchTableViewCell.m */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDA74C411C0699ED00C72D4E /* Build configuration list for PBXNativeTarget "Various" */;
 			buildPhases = (
+				CB221641B00D9715B9E7153E /* Check Pods Manifest.lock */,
 				FDA74C0D1C0699EC00C72D4E /* Sources */,
 				FDA74C0E1C0699EC00C72D4E /* Frameworks */,
 				FDA74C0F1C0699EC00C72D4E /* Resources */,
+				53F2F51FC6869D7AAA10F90C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,9 +323,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA74C271C0699EC00C72D4E /* LaunchScreen.storyboard in Resources */,
-				FDA74C241C0699EC00C72D4E /* Assets.xcassets in Resources */,
-				FDA74C221C0699EC00C72D4E /* Main.storyboard in Resources */,
+				FDA74C5E1C069B6500C72D4E /* Info.plist in Resources */,
+				FDA74C5D1C069B6500C72D4E /* Main.storyboard in Resources */,
+				FDA74C5B1C069B6500C72D4E /* Assets.xcassets in Resources */,
+				FDA74C5C1C069B6500C72D4E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,15 +346,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53F2F51FC6869D7AAA10F90C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB221641B00D9715B9E7153E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDA74C0D1C0699EC00C72D4E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA74C1F1C0699EC00C72D4E /* SecondViewController.m in Sources */,
-				FDA74C191C0699EC00C72D4E /* AppDelegate.m in Sources */,
-				FDA74C1C1C0699EC00C72D4E /* FirstViewController.m in Sources */,
-				FDA74C161C0699EC00C72D4E /* main.m in Sources */,
+				FDA74C5F1C069B6500C72D4E /* main.m in Sources */,
+				FDA74C661C069E6200C72D4E /* SearchTableViewCell.m in Sources */,
+				FDA74C631C069E4400C72D4E /* SearchViewController.m in Sources */,
+				FDA74C5A1C069B6500C72D4E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,20 +423,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FDA74C201C0699EC00C72D4E /* Main.storyboard */ = {
+		FDA74C531C069B6500C72D4E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FDA74C211C0699EC00C72D4E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FDA74C251C0699EC00C72D4E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FDA74C261C0699EC00C72D4E /* Base */,
+				FDA74C541C069B6500C72D4E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FDA74C551C069B6500C72D4E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDA74C561C069B6500C72D4E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -369,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -406,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -415,9 +524,10 @@
 		};
 		FDA74C421C0699ED00C72D4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 143D1289DF492F37F11C6BD9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Various/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Various/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.Various;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,9 +536,10 @@
 		};
 		FDA74C431C0699ED00C72D4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC30FBF7877E4097940F6FD0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Various/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Various/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.Various;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,6 +613,7 @@
 				FDA74C431C0699ED00C72D4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDA74C441C0699ED00C72D4E /* Build configuration list for PBXNativeTarget "VariousTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +622,7 @@
 				FDA74C461C0699ED00C72D4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FDA74C471C0699ED00C72D4E /* Build configuration list for PBXNativeTarget "VariousUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +631,7 @@
 				FDA74C491C0699ED00C72D4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

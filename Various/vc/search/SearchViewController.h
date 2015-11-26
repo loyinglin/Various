@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  SearchViewController.h
 //  Various
 //
 //  Created by 林伟池 on 15/11/26.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface SearchViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end
-

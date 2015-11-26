@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  SearchTableViewCell.h
 //  Various
 //
 //  Created by 林伟池 on 15/11/26.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface SearchTableViewCell : UITableViewCell
 
 @end
-
