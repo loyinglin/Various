@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77FB3EEC6C2365A4B62D8B23 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9A700AD0673CA6F18777B9 /* libPods.a */; };
+		1CDC910D4501E397DE8E1067 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1199C0DD02431D0C3030667 /* libPods.a */; };
+		FD009EF51C06AF7700295FD7 /* SearchPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD009EF41C06AF7700295FD7 /* SearchPhoneController.m */; settings = {ASSET_TAGS = (); }; };
+		FD009EFE1C06B8D500295FD7 /* libPods-LinqToObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD009EFC1C06B8D500295FD7 /* libPods-LinqToObjectiveC.a */; };
+		FD009EFF1C06B8D500295FD7 /* libPods-ReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD009EFD1C06B8D500295FD7 /* libPods-ReactiveCocoa.a */; };
 		FDA74C321C0699ED00C72D4E /* VariousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C311C0699ED00C72D4E /* VariousTests.m */; };
 		FDA74C3D1C0699ED00C72D4E /* VariousUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C3C1C0699ED00C72D4E /* VariousUITests.m */; };
 		FDA74C5A1C069B6500C72D4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C511C069B6500C72D4E /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
@@ -39,8 +42,15 @@
 
 /* Begin PBXFileReference section */
 		143D1289DF492F37F11C6BD9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B1199C0DD02431D0C3030667 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC30FBF7877E4097940F6FD0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		ED9A700AD0673CA6F18777B9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD009EF31C06AF7700295FD7 /* SearchPhoneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchPhoneController.h; sourceTree = "<group>"; };
+		FD009EF41C06AF7700295FD7 /* SearchPhoneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchPhoneController.m; sourceTree = "<group>"; };
+		FD009EF61C06B3F700295FD7 /* libPods-LinqToObjectiveC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-LinqToObjectiveC.a"; path = "Pods/../build/Debug-iphoneos/libPods-LinqToObjectiveC.a"; sourceTree = "<group>"; };
+		FD009EF81C06B43F00295FD7 /* libPods-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ReactiveCocoa.a"; path = "Pods/../build/Debug-iphoneos/libPods-ReactiveCocoa.a"; sourceTree = "<group>"; };
+		FD009EFA1C06B7A000295FD7 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Pods/../build/Debug-iphoneos/Pods/ReactiveCocoa.framework"; sourceTree = "<group>"; };
+		FD009EFC1C06B8D500295FD7 /* libPods-LinqToObjectiveC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-LinqToObjectiveC.a"; path = "Pods/../build/Debug-iphoneos/libPods-LinqToObjectiveC.a"; sourceTree = "<group>"; };
+		FD009EFD1C06B8D500295FD7 /* libPods-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ReactiveCocoa.a"; path = "Pods/../build/Debug-iphoneos/libPods-ReactiveCocoa.a"; sourceTree = "<group>"; };
 		FDA74C111C0699EC00C72D4E /* Various.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Various.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C2D1C0699ED00C72D4E /* VariousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VariousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C311C0699ED00C72D4E /* VariousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariousTests.m; sourceTree = "<group>"; };
@@ -59,6 +69,7 @@
 		FDA74C621C069E4400C72D4E /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		FDA74C641C069E6200C72D4E /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
 		FDA74C651C069E6200C72D4E /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		FDA74C671C06ACFD00C72D4E /* libPods-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ReactiveCocoa.a"; path = "Pods/../build/Debug-iphoneos/libPods-ReactiveCocoa.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77FB3EEC6C2365A4B62D8B23 /* libPods.a in Frameworks */,
+				FD009EFE1C06B8D500295FD7 /* libPods-LinqToObjectiveC.a in Frameworks */,
+				FD009EFF1C06B8D500295FD7 /* libPods-ReactiveCocoa.a in Frameworks */,
+				1CDC910D4501E397DE8E1067 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +112,13 @@
 		1718FB0FC7E9410D237E8015 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED9A700AD0673CA6F18777B9 /* libPods.a */,
+				FD009EFC1C06B8D500295FD7 /* libPods-LinqToObjectiveC.a */,
+				FD009EFD1C06B8D500295FD7 /* libPods-ReactiveCocoa.a */,
+				FD009EFA1C06B7A000295FD7 /* ReactiveCocoa.framework */,
+				FD009EF81C06B43F00295FD7 /* libPods-ReactiveCocoa.a */,
+				FD009EF61C06B3F700295FD7 /* libPods-LinqToObjectiveC.a */,
+				FDA74C671C06ACFD00C72D4E /* libPods-ReactiveCocoa.a */,
+				B1199C0DD02431D0C3030667 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,6 +233,8 @@
 				FDA74C621C069E4400C72D4E /* SearchViewController.m */,
 				FDA74C641C069E6200C72D4E /* SearchTableViewCell.h */,
 				FDA74C651C069E6200C72D4E /* SearchTableViewCell.m */,
+				FD009EF31C06AF7700295FD7 /* SearchPhoneController.h */,
+				FD009EF41C06AF7700295FD7 /* SearchPhoneController.m */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -385,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA74C5F1C069B6500C72D4E /* main.m in Sources */,
+				FD009EF51C06AF7700295FD7 /* SearchPhoneController.m in Sources */,
 				FDA74C661C069E6200C72D4E /* SearchTableViewCell.m in Sources */,
 				FDA74C631C069E4400C72D4E /* SearchViewController.m in Sources */,
 				FDA74C5A1C069B6500C72D4E /* AppDelegate.m in Sources */,
@@ -527,8 +549,16 @@
 			baseConfigurationReference = 143D1289DF492F37F11C6BD9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Various/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.Various;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -539,8 +569,16 @@
 			baseConfigurationReference = BC30FBF7877E4097940F6FD0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Various/supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.Various;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

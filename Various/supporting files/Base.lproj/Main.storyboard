@@ -6,9 +6,26 @@
     </dependencies>
     <scenes>
         <!--查询-->
+        <scene sceneID="QbC-Dx-Vhy">
+            <objects>
+                <navigationController id="wPJ-oH-giE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="查询" image="first" selectedImage="first" id="DzI-XD-Ust"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jIg-Lt-00i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="jud-rL-Brf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcN-mO-2SM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="-389"/>
+        </scene>
+        <!--查询-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="9pv-A4-QxB" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -18,17 +35,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yqc-tG-4XT">
-                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="oeK-HR-ySN" rowHeight="53" style="IBUITableViewCellStyleDefault" id="aOF-VK-4u3" customClass="SearchTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell0" textLabel="oeK-HR-ySN" rowHeight="53" style="IBUITableViewCellStyleDefault" id="aOF-VK-4u3" customClass="SearchTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aOF-VK-4u3" id="qh5-3t-BZ7">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="52.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oeK-HR-ySN">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="手机号码查询" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oeK-HR-ySN">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="52.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" textLabel="z9O-2a-U9J" style="IBUITableViewCellStyleDefault" id="2Gv-wG-ge8">
+                                        <rect key="frame" x="0.0" y="81" width="600" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Gv-wG-ge8" id="iRe-T3-gzg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z9O-2a-U9J">
                                                     <rect key="frame" x="15" y="0.0" width="570" height="52.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -54,10 +88,91 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="查询" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="查询" id="CCU-zn-5Rg"/>
+                    <connections>
+                        <segue destination="fPN-sp-aUl" kind="show" identifier="cell0" id="prO-8H-ZWO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1477" y="-389"/>
+        </scene>
+        <!--Search Phone Controller-->
+        <scene sceneID="dwm-Nm-Ipl">
+            <objects>
+                <viewController id="fPN-sp-aUl" customClass="SearchPhoneController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Adg-bl-pum"/>
+                        <viewControllerLayoutGuide type="bottom" id="18F-ee-TrF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FI3-cZ-Os5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请收入手机号码" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FiA-et-fKa">
+                                <rect key="frame" x="241" y="94" width="119" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查询中.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unj-18-Mmc">
+                                <rect key="frame" x="274" y="132" width="53.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号码：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Own-0C-zl7">
+                                <rect key="frame" x="258" y="198" width="85" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="省份：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTJ-Ve-bJe">
+                                <rect key="frame" x="275" y="339" width="51" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKa-gF-uTP">
+                                <rect key="frame" x="281" y="409.5" width="39" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务商：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rw5-Dc-2lY">
+                                <rect key="frame" x="267" y="268.5" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wKa-gF-uTP" firstAttribute="top" secondItem="RTJ-Ve-bJe" secondAttribute="bottom" constant="50" id="5O0-TJ-gZ1"/>
+                            <constraint firstItem="Own-0C-zl7" firstAttribute="top" secondItem="unj-18-Mmc" secondAttribute="bottom" constant="48" id="5ph-LM-onP"/>
+                            <constraint firstItem="RTJ-Ve-bJe" firstAttribute="top" secondItem="rw5-Dc-2lY" secondAttribute="bottom" constant="50" id="6oi-v3-5dw"/>
+                            <constraint firstItem="unj-18-Mmc" firstAttribute="centerX" secondItem="FiA-et-fKa" secondAttribute="centerX" id="BcP-bE-vp7"/>
+                            <constraint firstItem="rw5-Dc-2lY" firstAttribute="centerX" secondItem="Own-0C-zl7" secondAttribute="centerX" id="Dfl-Me-eYU"/>
+                            <constraint firstItem="Own-0C-zl7" firstAttribute="centerX" secondItem="unj-18-Mmc" secondAttribute="centerX" id="MeM-kO-gu9"/>
+                            <constraint firstItem="FiA-et-fKa" firstAttribute="top" secondItem="Adg-bl-pum" secondAttribute="bottom" constant="30" id="ZXG-mU-osz"/>
+                            <constraint firstItem="FiA-et-fKa" firstAttribute="centerX" secondItem="FI3-cZ-Os5" secondAttribute="centerX" id="biW-dT-8bX"/>
+                            <constraint firstItem="wKa-gF-uTP" firstAttribute="centerX" secondItem="RTJ-Ve-bJe" secondAttribute="centerX" id="ioN-lb-gTq"/>
+                            <constraint firstItem="rw5-Dc-2lY" firstAttribute="top" secondItem="Own-0C-zl7" secondAttribute="bottom" constant="50" id="mVH-Xl-AvW"/>
+                            <constraint firstItem="unj-18-Mmc" firstAttribute="top" secondItem="FiA-et-fKa" secondAttribute="bottom" constant="8" id="uqk-DV-SxB"/>
+                            <constraint firstItem="RTJ-Ve-bJe" firstAttribute="centerX" secondItem="rw5-Dc-2lY" secondAttribute="centerX" id="vMI-ZX-Rv6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myCity" destination="wKa-gF-uTP" id="cX1-8A-2zR"/>
+                        <outlet property="myPhoneNum" destination="Own-0C-zl7" id="0gC-d4-0wz"/>
+                        <outlet property="myProvince" destination="RTJ-Ve-bJe" id="AH1-rk-skJ"/>
+                        <outlet property="myStatus" destination="unj-18-Mmc" id="eFU-jE-emT"/>
+                        <outlet property="mySupllier" destination="rw5-Dc-2lY" id="rgS-8R-aMM"/>
+                        <outlet property="searchText" destination="FiA-et-fKa" id="okc-ny-C7Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZH-Ca-vMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2173" y="-389"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -110,7 +225,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="wPJ-oH-giE" kind="relationship" relationship="viewControllers" id="Wbx-BQ-v4W"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
