@@ -7,8 +7,14 @@
 //
 
 #import "SearchExpressController.h"
+#import "SearchExpressViewModel.h"
 #import <ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
+
+typedef NS_ENUM(NSInteger, LYSearchExpressError) {
+    LYSearchExpressErrorCodeError,
+    LYSearchExpressErrorAPIError
+};
 
 @interface SearchExpressController ()
 
@@ -34,7 +40,7 @@
 @property (nonatomic , strong) NSDictionary* myExpressDict;
 @property (nonatomic , strong) NSArray<NSString*>* myExpressDesc;
 
-
+@property (nonatomic , strong) SearchExpressViewModel* myViewModel;
 @end
 
 @implementation SearchExpressController
@@ -47,17 +53,20 @@
                  self.button3, self.button4, self.button5,
                  self.button6, self.button7, self.button8,
                  nil];
-    self.myExpressDesc = [NSArray arrayWithObjects:@"YT", @"ST", @"ZT",
+    self.myExpressDesc = [NSArray arrayWithObjects:@"YT", @"ZY", @"ZT",
                           @"YZEMS", @"TT", @"YS",
-                          @"KJ", @"QF", @"ZY",
+                          @"KJ", @"QF",
                           nil];
     
-    [self selectButton:self.button0];
-    
+    @weakify(self);
+
     NSMutableArray<RACSignal*>* signalArr = [NSMutableArray array];
     for (UIButton* item in self.myButtons) {
+
         item.rac_command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(UIButton* button) {
             RACSignal* ret = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+
+                @strongify(self);
                 [self selectButton:button];
                 [subscriber sendCompleted];
                 return nil;
@@ -74,27 +83,43 @@
     }
     
     RACSignal* currentStatus = [RACSignal merge:signalArr];
-    [currentStatus subscribeNext:^(UIButton* button) {
-        NSLog(@"current %@", button);
+
+    self.myViewModel = [[SearchExpressViewModel alloc] init];
+    
+
+    RAC(self.myViewModel, myExpressType) = [currentStatus map:^id(id value) {
+        @strongify(self);
+        return [self.myExpressDesc objectAtIndex:[self.myButtons indexOfObject:value]];
+    }];
+    
+    [RACObserve(self.myViewModel, myExpressType) subscribeNext:^(id x) {
+        NSLog(@"%@", x);
     }];
     
     [self.button0.rac_command execute:self.button0];
     
-    
-    @weakify(self);
     self.mySearchButton.rac_command = [[RACCommand alloc] initWithEnabled:[self isExpressCodeValid] signalBlock:^RACSignal *(id input) {
         @strongify(self);
-        RACSignal* signal = [self signalForSearchExpressWithText:self.mySearchText.text];
-        [signal subscribeNext:^(NSDictionary* x) {
-            self.myExpressDict = x;
-        }];
+        RACSignal* signal = [self signalForSearchExpressWithText:self.mySearchText.text Type:self.myViewModel.myExpressType];
         return signal;
     }];
     
     [RACObserve(self, myExpressDict) subscribeNext:^(NSDictionary* dict) {
         NSLog(@"dict change");
+        @strongify(self);
         [self.myTableView reloadData];
     }];
+    
+    [self.mySearchButton.rac_command.executionSignals subscribeNext:^(RACSignal* signal) {
+        [signal subscribeNext:^(id x) {
+            @strongify(self);
+            NSArray* arr = [x objectForKey:@"wayBills"];
+            NSDictionary* detail = arr[0];
+            NSLog(@"%@", [detail objectForKey:@"processInfo"]);
+            self.myExpressDict = x;
+        }];
+    }];
+    
     
     RACSignal* started = [self.mySearchButton.rac_command.executionSignals map:^id(id value) {
         return @"search ing";
@@ -119,57 +144,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc{
+    NSLog(@"desac %@", self);
+}
+
 - (RACSignal*)isExpressCodeValid{
-    return [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        return nil;
-    }]
-            map:^id(id value) {
-                return @(YES);
-            }];
-}
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (void)textRac{
-    @weakify(self);
-    
-    [[[[[self.mySearchText.rac_textSignal
-         filter:^BOOL(NSString* text) {
-             return text.length == 11;
-         }]
-        throttle:0.5]
-       flattenMap:^RACStream *(NSString* text) {
-           @strongify(self);
-           return [self signalForSearchExpressWithText:text];
-       }]
-      deliverOn:[RACScheduler mainThreadScheduler]]
-     subscribeNext:^(NSArray* arr) {
-         @strongify(self);
-        
-         NSLog(@"%@", [arr description]);
-
-     }
-     error:^(NSError *error) {
-         NSLog(@"error");
-     }];
-    
+    return [self.mySearchText.rac_textSignal map:^id(NSString* text) {
+        return @(text.length != 0);
+    }];
 }
 
 
-- (RACSignal*)signalForSearchExpressWithText:(NSString*)text {
-    @weakify(self)
+- (RACSignal*)signalForSearchExpressWithText:(NSString*)text Type:(NSString*)type{
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        @strongify(self)
+
+        
+        NSError* codeError = [NSError errorWithDomain:@"LYERROR" code:LYSearchExpressErrorCodeError userInfo:nil];
+        NSError* apiError = [NSError errorWithDomain:@"LYERROR" code:LYSearchExpressErrorAPIError userInfo:nil];
         
         NSString *httpUrl = @"http://apis.baidu.com/ppsuda/waybillnoquery/waybillnotrace";
-        NSString *httpArg = [NSString stringWithFormat:@"expresscode=YT&billno=%@", @"200093247451"];
+        NSString *httpArg = [NSString stringWithFormat:@"expresscode=%@&billno=%@", type, text];
         
         NSString *urlStr = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, httpArg];
         NSURL *url = [NSURL URLWithString: urlStr];
@@ -180,7 +174,7 @@
                                            queue: [NSOperationQueue mainQueue]
                                completionHandler: ^(NSURLResponse *response, NSData *data, NSError *error){
                                    if (error) {
-//                                       [subscriber sendError:apiError];
+                                       [subscriber sendError:apiError];
                                    } else {
                                        NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
                                        if (responseCode == 200) {
@@ -188,20 +182,23 @@
                                            NSNumber* result = [dict objectForKey:@"result"];
                                            if ([result integerValue] == 1) {
                                                NSArray* arr = [dict objectForKey:@"data"];
-                                               [subscriber sendNext:arr[0]];
-                                               [subscriber sendCompleted];
+                                               id responseData = arr[0];
+                                               if ([responseData isKindOfClass:[NSDictionary class]]) {
+                                                   [subscriber sendNext:responseData];
+                                                   [subscriber sendCompleted];
+                                               }
+                                               else {
+                                                   [subscriber sendError:codeError];
+                                               }
                                                
                                            }
-                                           
                                            else {
-                                               [subscriber sendNext:[[NSDictionary alloc] initWithObjectsAndKeys:@"手机error", @"error", nil]];
-                                               //                                               [subscriber sendError:apiError];
+                                               [subscriber sendError:codeError];
                                            }
                                            
                                        }
                                        else{
-                                           NSLog(@"aerror");
-                                           //                                           [subscriber sendError:apiError];
+                                           [subscriber sendError:apiError];
                                        }
                                    }
                                }];
@@ -262,8 +259,8 @@
     cell.layer.borderWidth = 0.5;
     cell.layer.borderColor = [UIColor blackColor].CGColor;
     
-    UILabel* timeLabel = [cell viewWithTag:10];
-    UILabel* descLabel = [cell viewWithTag:20];
+    UILabel* timeLabel = (UILabel*)[cell viewWithTag:10];
+    UILabel* descLabel = (UILabel*)[cell viewWithTag:20];
     NSArray* arr = [self.myExpressDict objectForKey:@"wayBills"];
     NSDictionary* dict = arr[indexPath.row];
     
