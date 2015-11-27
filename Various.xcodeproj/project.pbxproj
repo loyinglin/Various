@@ -11,6 +11,7 @@
 		FD009EF51C06AF7700295FD7 /* SearchPhoneController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD009EF41C06AF7700295FD7 /* SearchPhoneController.m */; settings = {ASSET_TAGS = (); }; };
 		FD009EFE1C06B8D500295FD7 /* libPods-LinqToObjectiveC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD009EFC1C06B8D500295FD7 /* libPods-LinqToObjectiveC.a */; };
 		FD009EFF1C06B8D500295FD7 /* libPods-ReactiveCocoa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD009EFD1C06B8D500295FD7 /* libPods-ReactiveCocoa.a */; };
+		FD009F021C06D96000295FD7 /* SearchExpressController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD009F011C06D96000295FD7 /* SearchExpressController.m */; settings = {ASSET_TAGS = (); }; };
 		FDA74C321C0699ED00C72D4E /* VariousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C311C0699ED00C72D4E /* VariousTests.m */; };
 		FDA74C3D1C0699ED00C72D4E /* VariousUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C3C1C0699ED00C72D4E /* VariousUITests.m */; };
 		FDA74C5A1C069B6500C72D4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C511C069B6500C72D4E /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
@@ -51,6 +52,8 @@
 		FD009EFA1C06B7A000295FD7 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Pods/../build/Debug-iphoneos/Pods/ReactiveCocoa.framework"; sourceTree = "<group>"; };
 		FD009EFC1C06B8D500295FD7 /* libPods-LinqToObjectiveC.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-LinqToObjectiveC.a"; path = "Pods/../build/Debug-iphoneos/libPods-LinqToObjectiveC.a"; sourceTree = "<group>"; };
 		FD009EFD1C06B8D500295FD7 /* libPods-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ReactiveCocoa.a"; path = "Pods/../build/Debug-iphoneos/libPods-ReactiveCocoa.a"; sourceTree = "<group>"; };
+		FD009F001C06D96000295FD7 /* SearchExpressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchExpressController.h; sourceTree = "<group>"; };
+		FD009F011C06D96000295FD7 /* SearchExpressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchExpressController.m; sourceTree = "<group>"; };
 		FDA74C111C0699EC00C72D4E /* Various.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Various.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C2D1C0699ED00C72D4E /* VariousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VariousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C311C0699ED00C72D4E /* VariousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariousTests.m; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 				FDA74C651C069E6200C72D4E /* SearchTableViewCell.m */,
 				FD009EF31C06AF7700295FD7 /* SearchPhoneController.h */,
 				FD009EF41C06AF7700295FD7 /* SearchPhoneController.m */,
+				FD009F001C06D96000295FD7 /* SearchExpressController.h */,
+				FD009F011C06D96000295FD7 /* SearchExpressController.m */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 			files = (
 				FDA74C5F1C069B6500C72D4E /* main.m in Sources */,
 				FD009EF51C06AF7700295FD7 /* SearchPhoneController.m in Sources */,
+				FD009F021C06D96000295FD7 /* SearchExpressController.m in Sources */,
 				FDA74C661C069E6200C72D4E /* SearchTableViewCell.m in Sources */,
 				FDA74C631C069E4400C72D4E /* SearchViewController.m in Sources */,
 				FDA74C5A1C069B6500C72D4E /* AppDelegate.m in Sources */,

@@ -33,8 +33,15 @@ typedef NS_ENUM(NSInteger, LYSearchPhoneError) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self textRac];
     
+}
 
+- (void)dealloc{
+    NSLog(@"desc %@", self);
+}
+
+- (void)textRac{
     @weakify(self);
     
     [[[[[self.searchText.rac_textSignal
@@ -43,25 +50,36 @@ typedef NS_ENUM(NSInteger, LYSearchPhoneError) {
          }]
         throttle:0.5]
        flattenMap:^RACStream *(NSString* text) {
-           @strongify(self)
+           @strongify(self);
+           self.myStatus.text = @"查询中...";
+           self.myStatus.hidden = NO;
            return [self signalForSearchPhoneWithText:text];
        }]
       deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext:^(NSDictionary* dict) {
+         @strongify(self);
+         if ([dict objectForKey:@"error"]) {
+             NSLog(@"error %@", [dict objectForKey:@"error"]);
+             self.myStatus.text = @"手机号码有误";
+             self.myStatus.hidden = NO;
+             return ;
+         }
          [self viewInitWithDict:dict];
+         self.myStatus.hidden = YES;
      }
      error:^(NSError *error) {
-         NSLog(@"error %@", error);
+         NSLog(@"error");
      }];
+
 }
 
 
 - (RACSignal*)signalForSearchPhoneWithText:(NSString*)text {
     NSError* phoneError = [NSError errorWithDomain:@"LYERROR" code:LYSearchPhoneErrorPhoneError userInfo:nil];
     NSError* apiError = [NSError errorWithDomain:@"LYERROR" code:LYSearchPhoneErrorAPIError userInfo:nil];
-//    @weakify(self)
+    @weakify(self)
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-//        @strongify(self)
+        @strongify(self)
         if (text.length != 11) {
             [subscriber sendError:phoneError];
         }
@@ -92,12 +110,13 @@ typedef NS_ENUM(NSInteger, LYSearchPhoneError) {
                                            }
                                            
                                            else {
-                                               [subscriber sendError:apiError];
+                                               [subscriber sendNext:[[NSDictionary alloc] initWithObjectsAndKeys:@"手机error", @"error", nil]];
+//                                               [subscriber sendError:apiError];
                                            }
                                            
                                        }
                                        else{
-                                           [subscriber sendError:apiError];
+//                                           [subscriber sendError:apiError];
                                        }
                                    }
                                }];
