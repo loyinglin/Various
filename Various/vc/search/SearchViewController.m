@@ -19,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:[[NSDictionary alloc] initWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +43,13 @@
 
 
 #pragma mark - view init
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tabBarController setTitle:@"search"];
+//    [self.navigationController.navigationItem setTitle:@"search"];
+//    NSLog(@"%@ %@", [self.navigationItem.title description], [self.navigationController.navigationItem.title
+}
 
 #pragma mark - ibaction
 

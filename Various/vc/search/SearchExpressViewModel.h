@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa.h>
+
+typedef NS_ENUM(NSInteger, LYSearchExpressError) {
+    LYSearchExpressErrorCodeError,
+    LYSearchExpressErrorAPIError
+};
 
 @interface SearchExpressViewModel : NSObject
 
 @property(nonatomic, strong) NSString* myExpressType;
 
+- (RACSignal*)signalForSearchExpressWithText:(NSString*)text Type:(NSString*)type;
 
 @end
