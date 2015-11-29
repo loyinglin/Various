@@ -123,6 +123,12 @@
                                                         <constraint firstAttribute="width" constant="108" id="vNO-ty-SBr"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="40" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是作者" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7L-cn-buI">
+                                                    <rect key="frame" x="78" y="31" width="52" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="aLO-1P-sip" secondAttribute="bottom" constant="5.5" id="3SZ-Jb-uRh"/>
@@ -130,8 +136,11 @@
                                                 <constraint firstItem="7Sm-Xc-8mE" firstAttribute="leading" secondItem="bcy-6R-WWy" secondAttribute="leadingMargin" constant="10" id="QCX-CQ-7GH"/>
                                                 <constraint firstItem="aLO-1P-sip" firstAttribute="leading" secondItem="bcy-6R-WWy" secondAttribute="leadingMargin" constant="10" id="daA-Ni-AUm"/>
                                                 <constraint firstItem="d7H-Nm-JOV" firstAttribute="top" secondItem="7Sm-Xc-8mE" secondAttribute="bottom" constant="5" id="dc6-zW-ak7"/>
+                                                <constraint firstItem="J7L-cn-buI" firstAttribute="centerY" secondItem="d7H-Nm-JOV" secondAttribute="centerY" id="hKF-ci-Mi0"/>
                                                 <constraint firstItem="aLO-1P-sip" firstAttribute="top" secondItem="d7H-Nm-JOV" secondAttribute="bottom" constant="5" id="ldG-Y0-tlD"/>
                                                 <constraint firstItem="d7H-Nm-JOV" firstAttribute="leading" secondItem="bcy-6R-WWy" secondAttribute="leadingMargin" constant="10" id="o7M-kD-uKJ"/>
+                                                <constraint firstItem="J7L-cn-buI" firstAttribute="leading" secondItem="d7H-Nm-JOV" secondAttribute="trailing" constant="8" id="oGB-Id-6OZ"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="7Sm-Xc-8mE" secondAttribute="trailing" id="tM4-bC-85N"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -152,7 +161,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="微信热门" image="first" id="fHW-Uu-u4w"/>
-                    <navigationItem key="navigationItem" title="test" id="MBd-vx-z0x"/>
+                    <navigationItem key="navigationItem" title="微信热门" id="MBd-vx-z0x"/>
                     <connections>
                         <outlet property="myTableView" destination="XzH-gY-4l1" id="CPx-3P-Rhf"/>
                         <segue destination="46z-oT-1CU" kind="show" identifier="hot_detail_board" id="Joq-M1-MnF"/>
@@ -162,7 +171,7 @@
             </objects>
             <point key="canvasLocation" x="724" y="434"/>
         </scene>
-        <!--test-->
+        <!--微信热门-->
         <scene sceneID="tl6-yN-Ziw">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="46z-oT-1CU" customClass="HotDetailController" sceneMemberID="viewController">
@@ -187,7 +196,7 @@
                             <constraint firstItem="yjh-ki-KUL" firstAttribute="leading" secondItem="fgP-hc-tOa" secondAttribute="leading" id="rwn-Vi-bMj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="test" id="bKU-68-x5F">
+                    <navigationItem key="navigationItem" title="微信热门" id="bKU-68-x5F">
                         <barButtonItem key="rightBarButtonItem" title="1~" id="yKY-Ty-Sge"/>
                     </navigationItem>
                     <connections>
@@ -201,7 +210,7 @@
         <!--微信热门-->
         <scene sceneID="jBy-3D-4Eb">
             <objects>
-                <navigationController id="SuI-ol-GXq" sceneMemberID="viewController">
+                <navigationController id="SuI-ol-GXq" customClass="WeixinRootController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="微信热门" image="first" id="zwV-d6-zPg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SIC-Tw-oZJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -548,7 +557,7 @@
         <scene sceneID="XZZ-xH-UrG">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uD0-Hx-yOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="XFd-Ej-SR5" sceneMemberID="viewController">
+                <navigationController id="XFd-Ej-SR5" customClass="SearchRootController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="查询" image="first" id="bVM-LH-ygk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1sW-cd-I5V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -565,4 +574,5 @@
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
+    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
 </document>

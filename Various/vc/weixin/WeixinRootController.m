@@ -1,24 +1,22 @@
 //
-//  IndexTabbarController.m
+//  WeixinRootController.m
 //  Various
 //
 //  Created by 林伟池 on 15/11/29.
 //  Copyright © 2015年 林伟池. All rights reserved.
 //
 
-#import "IndexTabbarController.h"
+#import "WeixinRootController.h"
 
-@interface IndexTabbarController ()
+@interface WeixinRootController ()
 
 @end
 
-@implementation IndexTabbarController
+@implementation WeixinRootController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    self.navigationController.navigationBar.hidden = YES;
-    [self.tabBar setTintColor:[UIColor blackColor]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,10 +24,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
 /*
 #pragma mark - Navigation
 
@@ -40,4 +34,8 @@
 }
 */
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 @end

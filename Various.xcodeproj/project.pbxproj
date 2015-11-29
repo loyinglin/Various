@@ -31,6 +31,12 @@
 		FD009F301C0972DC00295FD7 /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD009F2F1C0972DC00295FD7 /* libPods-AFNetworking.a */; };
 		FD3C42DE1C0A8A1900A2BC67 /* HotDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C42DD1C0A8A1900A2BC67 /* HotDetailController.m */; settings = {ASSET_TAGS = (); }; };
 		FD3C42E41C0A92D300A2BC67 /* IndexTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C42E31C0A92D300A2BC67 /* IndexTabbarController.m */; settings = {ASSET_TAGS = (); }; };
+		FD3C43291C0AFBE100A2BC67 /* WeixinHotViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C43281C0AFBE100A2BC67 /* WeixinHotViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		FD3C432D1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C432C1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.m */; settings = {ASSET_TAGS = (); }; };
+		FD3C43301C0B08A400A2BC67 /* LYTypeEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C432F1C0B08A400A2BC67 /* LYTypeEncoding.m */; settings = {ASSET_TAGS = (); }; };
+		FD3C43331C0B08BD00A2BC67 /* NSObject+LYTypeConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C43321C0B08BD00A2BC67 /* NSObject+LYTypeConversion.m */; settings = {ASSET_TAGS = (); }; };
+		FD3C43361C0B0DC300A2BC67 /* SearchRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C43351C0B0DC300A2BC67 /* SearchRootController.m */; settings = {ASSET_TAGS = (); }; };
+		FD3C43391C0B0DFE00A2BC67 /* WeixinRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C43381C0B0DFE00A2BC67 /* WeixinRootController.m */; settings = {ASSET_TAGS = (); }; };
 		FDA74C321C0699ED00C72D4E /* VariousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C311C0699ED00C72D4E /* VariousTests.m */; };
 		FDA74C3D1C0699ED00C72D4E /* VariousUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C3C1C0699ED00C72D4E /* VariousUITests.m */; };
 		FDA74C5A1C069B6500C72D4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C511C069B6500C72D4E /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
@@ -101,6 +107,18 @@
 		FD3C42DD1C0A8A1900A2BC67 /* HotDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotDetailController.m; sourceTree = "<group>"; };
 		FD3C42E21C0A92D300A2BC67 /* IndexTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexTabbarController.h; sourceTree = "<group>"; };
 		FD3C42E31C0A92D300A2BC67 /* IndexTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTabbarController.m; sourceTree = "<group>"; };
+		FD3C43271C0AFBE100A2BC67 /* WeixinHotViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinHotViewModel.h; sourceTree = "<group>"; };
+		FD3C43281C0AFBE100A2BC67 /* WeixinHotViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinHotViewModel.m; sourceTree = "<group>"; };
+		FD3C432B1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LYDictToObject.h"; sourceTree = "<group>"; };
+		FD3C432C1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LYDictToObject.m"; sourceTree = "<group>"; };
+		FD3C432E1C0B08A400A2BC67 /* LYTypeEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTypeEncoding.h; sourceTree = "<group>"; };
+		FD3C432F1C0B08A400A2BC67 /* LYTypeEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTypeEncoding.m; sourceTree = "<group>"; };
+		FD3C43311C0B08BD00A2BC67 /* NSObject+LYTypeConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LYTypeConversion.h"; sourceTree = "<group>"; };
+		FD3C43321C0B08BD00A2BC67 /* NSObject+LYTypeConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LYTypeConversion.m"; sourceTree = "<group>"; };
+		FD3C43341C0B0DC300A2BC67 /* SearchRootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchRootController.h; sourceTree = "<group>"; };
+		FD3C43351C0B0DC300A2BC67 /* SearchRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchRootController.m; sourceTree = "<group>"; };
+		FD3C43371C0B0DFE00A2BC67 /* WeixinRootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinRootController.h; sourceTree = "<group>"; };
+		FD3C43381C0B0DFE00A2BC67 /* WeixinRootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinRootController.m; sourceTree = "<group>"; };
 		FDA74C111C0699EC00C72D4E /* Various.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Various.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C2D1C0699ED00C72D4E /* VariousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VariousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C311C0699ED00C72D4E /* VariousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariousTests.m; sourceTree = "<group>"; };
@@ -182,8 +200,12 @@
 				FD009F081C094DF800295FD7 /* WeixinTableViewController.m */,
 				FD009F2C1C09513000295FD7 /* WeixinHotController.h */,
 				FD009F2D1C09513000295FD7 /* WeixinHotController.m */,
+				FD3C43271C0AFBE100A2BC67 /* WeixinHotViewModel.h */,
+				FD3C43281C0AFBE100A2BC67 /* WeixinHotViewModel.m */,
 				FD3C42DC1C0A8A1900A2BC67 /* HotDetailController.h */,
 				FD3C42DD1C0A8A1900A2BC67 /* HotDetailController.m */,
+				FD3C43371C0B0DFE00A2BC67 /* WeixinRootController.h */,
+				FD3C43381C0B0DFE00A2BC67 /* WeixinRootController.m */,
 			);
 			path = weixin;
 			sourceTree = "<group>";
@@ -226,6 +248,19 @@
 				FD009F1E1C09509600295FD7 /* whiteArrow@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD3C432A1C0AFECF00A2BC67 /* LYCategory */ = {
+			isa = PBXGroup;
+			children = (
+				FD3C43311C0B08BD00A2BC67 /* NSObject+LYTypeConversion.h */,
+				FD3C43321C0B08BD00A2BC67 /* NSObject+LYTypeConversion.m */,
+				FD3C432E1C0B08A400A2BC67 /* LYTypeEncoding.h */,
+				FD3C432F1C0B08A400A2BC67 /* LYTypeEncoding.m */,
+				FD3C432B1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.h */,
+				FD3C432C1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.m */,
+			);
+			path = LYCategory;
 			sourceTree = "<group>";
 		};
 		FDA74C081C0699EC00C72D4E = {
@@ -283,6 +318,7 @@
 		FDA74C4B1C069B6500C72D4E /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				FD3C432A1C0AFECF00A2BC67 /* LYCategory */,
 				FD009F0A1C09509600295FD7 /* EGOTableViewPullRefresh */,
 			);
 			path = extension;
@@ -348,6 +384,8 @@
 				FD009F011C06D96000295FD7 /* SearchExpressController.m */,
 				FD009F031C080BBD00295FD7 /* SearchExpressViewModel.h */,
 				FD009F041C080BBD00295FD7 /* SearchExpressViewModel.m */,
+				FD3C43341C0B0DC300A2BC67 /* SearchRootController.h */,
+				FD3C43351C0B0DC300A2BC67 /* SearchRootController.m */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -531,17 +569,23 @@
 				FD009F1F1C09509600295FD7 /* EGORefreshTableHeaderView.m in Sources */,
 				FDA74C5F1C069B6500C72D4E /* main.m in Sources */,
 				FD3C42E41C0A92D300A2BC67 /* IndexTabbarController.m in Sources */,
+				FD3C43301C0B08A400A2BC67 /* LYTypeEncoding.m in Sources */,
 				FD009F211C09509600295FD7 /* MessageInterceptor.m in Sources */,
+				FD3C432D1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.m in Sources */,
 				FD009F091C094DF800295FD7 /* WeixinTableViewController.m in Sources */,
+				FD3C43391C0B0DFE00A2BC67 /* WeixinRootController.m in Sources */,
+				FD3C43361C0B0DC300A2BC67 /* SearchRootController.m in Sources */,
 				FD3C42DE1C0A8A1900A2BC67 /* HotDetailController.m in Sources */,
 				FD009F201C09509600295FD7 /* LoadMoreTableFooterView.m in Sources */,
 				FD009EF51C06AF7700295FD7 /* SearchPhoneController.m in Sources */,
 				FD009F051C080BBD00295FD7 /* SearchExpressViewModel.m in Sources */,
 				FD009F021C06D96000295FD7 /* SearchExpressController.m in Sources */,
+				FD3C43291C0AFBE100A2BC67 /* WeixinHotViewModel.m in Sources */,
 				FDA74C661C069E6200C72D4E /* SearchTableViewCell.m in Sources */,
 				FDA74C631C069E4400C72D4E /* SearchViewController.m in Sources */,
 				FD009F2E1C09513000295FD7 /* WeixinHotController.m in Sources */,
 				FD009F221C09509600295FD7 /* PullTableView.m in Sources */,
+				FD3C43331C0B08BD00A2BC67 /* NSObject+LYTypeConversion.m in Sources */,
 				FDA74C5A1C069B6500C72D4E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

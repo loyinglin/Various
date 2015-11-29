@@ -9,17 +9,16 @@
 #import "WeixinHotController.h"
 #import "UIImageView+AFNetworking.h"
 #import "HotDetailController.h"
+#import "WeixinHotViewModel.h"
 #import <ReactiveCocoa.h>
 
 @interface WeixinHotController ()
 
 @property (nonatomic , strong) IBOutlet PullTableView*  myTableView;
 
-
-@property (nonatomic , strong) NSDictionary* myData;
-
-
 @property (nonatomic , strong) NSString* myDetailUrl;
+
+@property (nonatomic , strong) WeixinHotViewModel* myViewModel;
 
 @end
 
@@ -27,12 +26,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.myViewModel = [WeixinHotViewModel new];
     // Do any additional setup after loading the view.
     [self refreshTable];
+    
+    
+    [RACObserve(self.myViewModel, myDataArr) subscribeNext:^(id x) {
+        NSLog(@"update");
+        [self refreshTable];
+    }];
+    
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationController.navigationBar setTitleTextAttributes:[[NSDictionary alloc] initWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+    
+    [self.myViewModel updateHotData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,26 +61,28 @@
 
 #pragma mark - view init
 
+- (void)dealloc{
+    NSLog(@"%@ dealloc", self);
+}
+
 #pragma mark - ibaction
 
 #pragma mark - ui
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"hot_detail_board"]) {
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
         HotDetailController* controller = segue.destinationViewController;
         controller.myWebUrl = self.myDetailUrl;
-//        controller.hidesBottomBarWhenPushed = YES;
+        //        controller.hidesBottomBarWhenPushed = YES;
     }
 }
+
 
 #pragma mark - delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    long ret = 0;
-    if (self.myData) {
-        ret = 10;
-    }
-    return ret;
+    return [self.myViewModel getDataCount];
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -83,13 +94,14 @@
     UILabel* title = (UILabel*)[cell viewWithTag:10];
     UILabel* desc = (UILabel*)[cell viewWithTag:20];
     UIImageView* img = (UIImageView*)[cell viewWithTag:30];
-    if (self.myData) {
-        NSDictionary* dict = [self.myData objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]];
-        if (dict) {
-            title.text = [dict objectForKey:@"title"];
-            desc.text = [dict objectForKey:@"description"];
-            [img setImageWithURL:[[NSURL alloc] initWithString:[dict objectForKey:@"picUrl"]]];
-        }
+    UILabel* hottime = (UILabel*)[cell viewWithTag:40];
+    WeixinHotData* data = [self.myViewModel getDataByIndex:indexPath.row];
+    if (data) {
+        title.text = data.title;
+        desc.text = data.auther;
+        hottime.text = data.hottime;
+        [img setImageWithURL:[[NSURL alloc] initWithString:data.picUrl]];
+        
     }
     
     return cell;
@@ -98,13 +110,13 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     self.myDetailUrl = nil;
-    if (self.myData) {
-        NSDictionary* dict = [self.myData objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]];
-        if (dict) {
-            self.myDetailUrl = [dict objectForKey:@"url"];
-            if ([self.myDetailUrl isKindOfClass:[NSString class]]) {
-                [self performSegueWithIdentifier:@"hot_detail_board" sender:self];
-            }
+    
+    WeixinHotData* data = [self.myViewModel getDataByIndex:indexPath.row];
+    if (data) {
+        
+        self.myDetailUrl = data.url;
+        if ([self.myDetailUrl isKindOfClass:[NSString class]]) {
+            [self performSegueWithIdentifier:@"hot_detail_board" sender:self];
         }
     }
     
@@ -118,51 +130,13 @@
 
 - (void)pullTableViewDidTriggerRefresh:(PullTableView *)pullTableView
 {
-    [[[RACSignal startLazilyWithScheduler:[RACScheduler currentScheduler] block:^(id<RACSubscriber> subscriber) {
-        
-        NSString *httpUrl = @"http://apis.baidu.com/txapi/weixin/wxhot";
-        NSString *httpArg = [NSString stringWithFormat:@"num=10&rand=1"];
-        
-        NSString *urlStr = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, httpArg];
-        NSURL *url = [NSURL URLWithString: urlStr];
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];
-        [request setHTTPMethod: @"GET"];
-        [request addValue: @"d233f5dfd98c24f5d9e595af6e5c9fac" forHTTPHeaderField: @"apikey"];
-        [NSURLConnection sendAsynchronousRequest: request
-                                           queue: [NSOperationQueue mainQueue]
-                               completionHandler: ^(NSURLResponse *response, NSData *data, NSError *error){
-                                   if (error) {
-
-                                   } else {
-                                       NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
-                                       if (responseCode == 200) {
-                                           NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                                           NSNumber* result = [dict objectForKey:@"code"];
-                                           if ([result integerValue] == 200) {
-                                               [subscriber sendNext:dict];
-                                           }
-                                           else {
-
-                                           }
-                                           
-                                       }
-                                       else{
-
-                                       }
-                                   }
-                               }];
-    }]
-      deliverOn:[RACScheduler mainThreadScheduler]]
-     subscribeNext:^(NSDictionary* dict) {
-         self.myData = dict;
-         [self refreshTable];
-     }];
+    [self.myViewModel updateHotData];
+    
 }
 
 - (void)pullTableViewDidTriggerLoadMore:(PullTableView *)pullTableView
 {
-    [self performSelector:@selector(refreshTable) withObject:nil afterDelay:1.0f];
-    
+    [self.myViewModel loadMoreData];
 }
 
 - (void) refreshTable

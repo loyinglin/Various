@@ -51,6 +51,10 @@
     [super viewWillDisappear:animated];
     self.tabBarController.tabBar.hidden = NO;
 }
+
+- (void)dealloc{
+    NSLog(@"hot detail dealloc");
+}
 #pragma mark - ibaction
 
 #pragma mark - ui
