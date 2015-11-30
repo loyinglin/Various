@@ -8,6 +8,8 @@
 
 #import "WeixinHotViewModel.h"
 #import "NSDictionary+LYDictToObject.h"
+
+#import <ReactiveCocoa/RACEXTScope.h>
 #import <ReactiveCocoa.h>
 
 @implementation WeixinHotData
@@ -54,10 +56,18 @@
 
 - (void)requestData{
     
+    @weakify(self);
     [[[RACSignal startLazilyWithScheduler:[RACScheduler currentScheduler] block:^(id<RACSubscriber> subscriber) {
         
         NSString *httpUrl = @"http://apis.baidu.com/txapi/weixin/wxhot";
-        NSString *httpArg = [NSString stringWithFormat:@"num=10&page=%ld", myPage];
+        NSString *httpArg;
+        
+        if (self.myRand.integerValue) {
+            httpArg = [NSString stringWithFormat:@"num=10&rand=%ld", self.myRand.integerValue];
+        }
+        else{
+            httpArg = [NSString stringWithFormat:@"num=10&page=%ld", myPage];
+        }
         
         NSString *urlStr = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, httpArg];
         NSURL *url = [NSURL URLWithString: urlStr];
@@ -90,6 +100,7 @@
     }]
       deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext:^(NSDictionary* dict) {
+         @strongify(self);
          NSMutableArray* newData = [NSMutableArray array];
          for (int i = 0; i < 10; ++i) {
              NSString* key = [NSString stringWithFormat:@"%d", i];

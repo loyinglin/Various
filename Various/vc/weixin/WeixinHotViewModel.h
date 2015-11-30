@@ -23,6 +23,8 @@
 
 @property (nonatomic , strong) NSArray* myDataArr;
 
+@property (nonatomic) NSNumber* myRand;
+
 #pragma mark - init
 
 + (instancetype)instance;

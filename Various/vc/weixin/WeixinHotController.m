@@ -20,6 +20,7 @@
 
 @property (nonatomic , strong) WeixinHotViewModel* myViewModel;
 
+@property (nonatomic , strong) IBOutlet UISwitch* myRandSwitch;
 @end
 
 @implementation WeixinHotController
@@ -36,6 +37,15 @@
         [self refreshTable];
     }];
     
+    
+    RAC(self.myViewModel, myRand) = [[self.myRandSwitch rac_signalForControlEvents:UIControlEventValueChanged]
+     map:^id(UISwitch* value) {
+         return @(value.on);
+     }];
+    
+//    [[self rac_signalForSelector:@selector(tableView:willSelectRowAtIndexPath:) fromProtocol:@protocol(UITableViewDelegate)] subscribeNext:^(id x) {
+//        NSLog(@"test%@", x);
+//    }];
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];

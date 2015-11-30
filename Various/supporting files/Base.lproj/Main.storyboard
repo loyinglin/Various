@@ -161,8 +161,34 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="微信热门" image="first" id="fHW-Uu-u4w"/>
-                    <navigationItem key="navigationItem" title="微信热门" id="MBd-vx-z0x"/>
+                    <navigationItem key="navigationItem" title="微信热门" id="MBd-vx-z0x">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Grb-2G-Zqt">
+                            <view key="customView" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VPt-Z8-bjf">
+                                <rect key="frame" x="500" y="0.0" width="80" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ia3-d4-x90">
+                                        <rect key="frame" x="36" y="6" width="51" height="31"/>
+                                        <color key="onTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="随机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMH-7d-YbA">
+                                        <rect key="frame" x="1" y="12.5" width="30" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ia3-d4-x90" secondAttribute="trailing" constant="-5" id="EZb-5P-RSB"/>
+                                    <constraint firstItem="ia3-d4-x90" firstAttribute="centerY" secondItem="VPt-Z8-bjf" secondAttribute="centerY" id="FO2-eQ-6Eb"/>
+                                    <constraint firstItem="ia3-d4-x90" firstAttribute="leading" secondItem="KMH-7d-YbA" secondAttribute="trailing" constant="5" id="GnU-7U-9je"/>
+                                    <constraint firstItem="KMH-7d-YbA" firstAttribute="centerY" secondItem="ia3-d4-x90" secondAttribute="centerY" id="VXB-R2-opd"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="myRandSwitch" destination="ia3-d4-x90" id="Tm8-Tk-V5R"/>
                         <outlet property="myTableView" destination="XzH-gY-4l1" id="CPx-3P-Rhf"/>
                         <segue destination="46z-oT-1CU" kind="show" identifier="hot_detail_board" id="Joq-M1-MnF"/>
                     </connections>
