@@ -9,7 +9,7 @@
 #import "GirlCollectionViewController.h"
 #import "GirlViewModel.h"
 #import "UIImageView+AFNetworking.h"
-#import "GirlDetailController.h"
+#import "LYBaseWebViewController.h"
 #import "MJRefresh.h"
 #import <ReactiveCocoa/RACEXTScope.h>
 #import <ReactiveCocoa.h>
@@ -103,7 +103,7 @@ static NSString * const openIdentifier = @"girl_detail_board";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:openIdentifier]) {
-        GirlDetailController* controller = segue.destinationViewController;
+        LYBaseWebViewController* controller = segue.destinationViewController;
         controller.myWebUrl = self.myUrl;
     }
 }

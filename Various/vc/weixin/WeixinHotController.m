@@ -8,7 +8,7 @@
 
 #import "WeixinHotController.h"
 #import "UIImageView+AFNetworking.h"
-#import "HotDetailController.h"
+#import "LYBaseWebViewController.h"
 #import "WeixinHotViewModel.h"
 #import <ReactiveCocoa.h>
 
@@ -46,10 +46,7 @@
 //    [[self rac_signalForSelector:@selector(tableView:willSelectRowAtIndexPath:) fromProtocol:@protocol(UITableViewDelegate)] subscribeNext:^(id x) {
 //        NSLog(@"test%@", x);
 //    }];
-    
-    [self.navigationController.navigationBar setBarTintColor:[UIColor blackColor]];
-    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
-    [self.navigationController.navigationBar setTitleTextAttributes:[[NSDictionary alloc] initWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil]];
+
     
     [self.myViewModel updateHotData];
 }
@@ -82,7 +79,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"hot_detail_board"]) {
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
-        HotDetailController* controller = segue.destinationViewController;
+        LYBaseWebViewController* controller = segue.destinationViewController;
         controller.myWebUrl = self.myDetailUrl;
         //        controller.hidesBottomBarWhenPushed = YES;
     }
