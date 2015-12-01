@@ -1,20 +1,20 @@
 //
-//  HotDetailController.m
+//  GirlDetailController.m
 //  Various
 //
-//  Created by 林伟池 on 15/11/29.
+//  Created by 林伟池 on 15/11/30.
 //  Copyright © 2015年 林伟池. All rights reserved.
 //
 
-#import "HotDetailController.h"
+#import "GirlDetailController.h"
 
-@interface HotDetailController ()
+@interface GirlDetailController ()
 
 @property (nonatomic , strong) IBOutlet UIWebView* myWebView;
 
 @end
 
-@implementation HotDetailController
+@implementation GirlDetailController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,31 +36,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-#pragma mark - view init
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-//    [self.navigationController setToolbarHidden:NO animated:YES];
-//    self.tabBarController.tabBar.hidden = YES;
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-//    self.tabBarController.tabBar.hidden = NO;
-}
-
-- (void)dealloc{
-    NSLog(@"hot detail dealloc");
-}
-#pragma mark - ibaction
-
-#pragma mark - ui
-
-#pragma mark - delegate
-
-#pragma mark - notify
 
 @end
