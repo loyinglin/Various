@@ -30,6 +30,11 @@
 		FD009F2E1C09513000295FD7 /* WeixinHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD009F2D1C09513000295FD7 /* WeixinHotController.m */; settings = {ASSET_TAGS = (); }; };
 		FD009F301C0972DC00295FD7 /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD009F2F1C0972DC00295FD7 /* libPods-AFNetworking.a */; };
 		FD29B2C71C0D509200B68C6C /* LYBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2C61C0D509200B68C6C /* LYBaseWebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FD29B2CB1C0D9AB600B68C6C /* CookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2CA1C0D9AB600B68C6C /* CookTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		FD29B2D11C0DA9BD00B68C6C /* CookViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2D01C0DA9BD00B68C6C /* CookViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		FD29B2D61C0EB8FD00B68C6C /* CookSubCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2D31C0EB8FD00B68C6C /* CookSubCategoryController.m */; settings = {ASSET_TAGS = (); }; };
+		FD29B2D71C0EB8FD00B68C6C /* CookSubCategoryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2D51C0EB8FD00B68C6C /* CookSubCategoryViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		FD29B2DA1C0EC9CA00B68C6C /* CookDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2D91C0EC9CA00B68C6C /* CookDetailController.m */; settings = {ASSET_TAGS = (); }; };
 		FD3C42E41C0A92D300A2BC67 /* IndexTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C42E31C0A92D300A2BC67 /* IndexTabbarController.m */; settings = {ASSET_TAGS = (); }; };
 		FD3C43291C0AFBE100A2BC67 /* WeixinHotViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C43281C0AFBE100A2BC67 /* WeixinHotViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		FD3C432D1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C432C1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.m */; settings = {ASSET_TAGS = (); }; };
@@ -122,6 +127,16 @@
 		FD009F2F1C0972DC00295FD7 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/../build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		FD29B2C51C0D509200B68C6C /* LYBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBaseWebViewController.h; sourceTree = "<group>"; };
 		FD29B2C61C0D509200B68C6C /* LYBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBaseWebViewController.m; sourceTree = "<group>"; };
+		FD29B2C91C0D9AB600B68C6C /* CookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookTableViewController.h; sourceTree = "<group>"; };
+		FD29B2CA1C0D9AB600B68C6C /* CookTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookTableViewController.m; sourceTree = "<group>"; };
+		FD29B2CF1C0DA9BD00B68C6C /* CookViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookViewModel.h; sourceTree = "<group>"; };
+		FD29B2D01C0DA9BD00B68C6C /* CookViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookViewModel.m; sourceTree = "<group>"; };
+		FD29B2D21C0EB8FD00B68C6C /* CookSubCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookSubCategoryController.h; sourceTree = "<group>"; };
+		FD29B2D31C0EB8FD00B68C6C /* CookSubCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookSubCategoryController.m; sourceTree = "<group>"; };
+		FD29B2D41C0EB8FD00B68C6C /* CookSubCategoryViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookSubCategoryViewModel.h; sourceTree = "<group>"; };
+		FD29B2D51C0EB8FD00B68C6C /* CookSubCategoryViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookSubCategoryViewModel.m; sourceTree = "<group>"; };
+		FD29B2D81C0EC9CA00B68C6C /* CookDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookDetailController.h; sourceTree = "<group>"; };
+		FD29B2D91C0EC9CA00B68C6C /* CookDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookDetailController.m; sourceTree = "<group>"; };
 		FD3C42E21C0A92D300A2BC67 /* IndexTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexTabbarController.h; sourceTree = "<group>"; };
 		FD3C42E31C0A92D300A2BC67 /* IndexTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTabbarController.m; sourceTree = "<group>"; };
 		FD3C43271C0AFBE100A2BC67 /* WeixinHotViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinHotViewModel.h; sourceTree = "<group>"; };
@@ -296,6 +311,23 @@
 				FD009F1E1C09509600295FD7 /* whiteArrow@2x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FD29B2C81C0D9AA100B68C6C /* cook */ = {
+			isa = PBXGroup;
+			children = (
+				FD29B2D21C0EB8FD00B68C6C /* CookSubCategoryController.h */,
+				FD29B2D31C0EB8FD00B68C6C /* CookSubCategoryController.m */,
+				FD29B2D41C0EB8FD00B68C6C /* CookSubCategoryViewModel.h */,
+				FD29B2D51C0EB8FD00B68C6C /* CookSubCategoryViewModel.m */,
+				FD29B2CF1C0DA9BD00B68C6C /* CookViewModel.h */,
+				FD29B2D01C0DA9BD00B68C6C /* CookViewModel.m */,
+				FD29B2C91C0D9AB600B68C6C /* CookTableViewController.h */,
+				FD29B2CA1C0D9AB600B68C6C /* CookTableViewController.m */,
+				FD29B2D81C0EC9CA00B68C6C /* CookDetailController.h */,
+				FD29B2D91C0EC9CA00B68C6C /* CookDetailController.m */,
+			);
+			path = cook;
 			sourceTree = "<group>";
 		};
 		FD3C432A1C0AFECF00A2BC67 /* LYCategory */ = {
@@ -496,6 +528,7 @@
 		FDA74C601C069BF400C72D4E /* search */ = {
 			isa = PBXGroup;
 			children = (
+				FD29B2C81C0D9AA100B68C6C /* cook */,
 				FD3C43741C0D423100A2BC67 /* translate */,
 				FDA74C611C069E4400C72D4E /* SearchViewController.h */,
 				FDA74C621C069E4400C72D4E /* SearchViewController.m */,
@@ -693,6 +726,7 @@
 			files = (
 				FD3C433D1C0BED1B00A2BC67 /* GirlCollectionViewController.m in Sources */,
 				FD009F1F1C09509600295FD7 /* EGORefreshTableHeaderView.m in Sources */,
+				FD29B2DA1C0EC9CA00B68C6C /* CookDetailController.m in Sources */,
 				FDA74C5F1C069B6500C72D4E /* main.m in Sources */,
 				FD3C43401C0BED7600A2BC67 /* GirlViewModel.m in Sources */,
 				FD3C42E41C0A92D300A2BC67 /* IndexTabbarController.m in Sources */,
@@ -706,12 +740,15 @@
 				FD009F091C094DF800295FD7 /* WeixinTableViewController.m in Sources */,
 				FD3C434B1C0BFBB800A2BC67 /* GirlRootController.m in Sources */,
 				FD3C43671C0C00FC00A2BC67 /* UIScrollView+MJRefresh.m in Sources */,
+				FD29B2CB1C0D9AB600B68C6C /* CookTableViewController.m in Sources */,
 				FD3C43391C0B0DFE00A2BC67 /* WeixinRootController.m in Sources */,
 				FD3C43361C0B0DC300A2BC67 /* SearchRootController.m in Sources */,
 				FD009F201C09509600295FD7 /* LoadMoreTableFooterView.m in Sources */,
 				FD3C43641C0C00FC00A2BC67 /* MJRefreshFooterView.m in Sources */,
 				FD009EF51C06AF7700295FD7 /* SearchPhoneController.m in Sources */,
+				FD29B2D71C0EB8FD00B68C6C /* CookSubCategoryViewModel.m in Sources */,
 				FD009F051C080BBD00295FD7 /* SearchExpressViewModel.m in Sources */,
+				FD29B2D11C0DA9BD00B68C6C /* CookViewModel.m in Sources */,
 				FD3C437A1C0D42BA00A2BC67 /* TranslateViewModel.m in Sources */,
 				FD009F021C06D96000295FD7 /* SearchExpressController.m in Sources */,
 				FD3C43291C0AFBE100A2BC67 /* WeixinHotViewModel.m in Sources */,
@@ -722,6 +759,7 @@
 				FD3C43631C0C00FC00A2BC67 /* MJRefreshConst.m in Sources */,
 				FD3C436C1C0D354500A2BC67 /* NewsTableViewController.m in Sources */,
 				FD009F221C09509600295FD7 /* PullTableView.m in Sources */,
+				FD29B2D61C0EB8FD00B68C6C /* CookSubCategoryController.m in Sources */,
 				FD3C43331C0B08BD00A2BC67 /* NSObject+LYTypeConversion.m in Sources */,
 				FD3C43661C0C00FC00A2BC67 /* UIScrollView+MJExtension.m in Sources */,
 				FD3C43681C0C00FC00A2BC67 /* UIView+MJExtension.m in Sources */,
