@@ -51,7 +51,10 @@ static NSString * const openIdentifier = @"girl_detail_board";
     
     [self addHeader];
     [self addFooter];
-    
+//    UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+//    if (layout) {
+//        layout.estimatedItemSize = CGSizeMake(100, 100);
+//    }
     
     
     // Do any additional setup after loading the view.
@@ -142,8 +145,9 @@ static NSString * const openIdentifier = @"girl_detail_board";
     CGSize size = CGSizeZero;
     
     size.width = [[UIScreen mainScreen] bounds].size.width / 3 - 1;
-    
+//
     size.height = 200;
+    
     
     return size;
 }

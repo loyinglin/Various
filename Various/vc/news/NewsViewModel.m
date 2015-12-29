@@ -59,7 +59,7 @@
     @weakify(self);
     [[[RACSignal startLazilyWithScheduler:[RACScheduler currentScheduler] block:^(id<RACSubscriber> subscriber) {
         
-        NSString *httpUrl = @"http://apis.baidu.com/txapi/huabian/newtop";
+        NSString *httpUrl = @"http://api.huceo.com/social/other";
         NSString *httpArg;
         
         if (self.myRand.integerValue) {
@@ -68,12 +68,13 @@
         else{
             httpArg = [NSString stringWithFormat:@"num=10&page=%ld", myPage];
         }
+        httpArg = [NSString stringWithFormat:@"%@&key=%@", httpArg, @"f4e2a3fc734cd04539610ddff313925f"];
+        
         
         NSString *urlStr = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, httpArg];
         NSURL *url = [NSURL URLWithString: urlStr];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];
         [request setHTTPMethod: @"GET"];
-        [request addValue: @"d233f5dfd98c24f5d9e595af6e5c9fac" forHTTPHeaderField: @"apikey"];
         [NSURLConnection sendAsynchronousRequest: request
                                            queue: [NSOperationQueue mainQueue]
                                completionHandler: ^(NSURLResponse *response, NSData *data, NSError *error){
@@ -101,10 +102,10 @@
       deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext:^(NSDictionary* dict) {
          @strongify(self);
+         NSArray* arr = [dict objectForKey:@"newslist"];
          NSMutableArray* newData = [NSMutableArray array];
-         for (int i = 0; i < 10; ++i) {
-             NSString* key = [NSString stringWithFormat:@"%d", i];
-             NSDictionary*  data = [dict objectForKey:key];
+         
+         for (NSDictionary* data in arr) {
              if (data) {
                  NewsData* item = [data objectForClass:[NewsData class]];
                  item.auther = [data objectForKey:@"description"];
@@ -113,6 +114,7 @@
                  }
              }
          }
+
          if (myPage == 1) {
              self.myDataArr = newData;
          }

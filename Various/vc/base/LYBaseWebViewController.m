@@ -22,7 +22,7 @@
     self.myWebView.delegate = self;
     
     [self.myWebView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:self.myWebUrl]]];
-    
+//    self.navigationController.hidesBarsOnSwipe = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,8 +49,8 @@
     }
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }

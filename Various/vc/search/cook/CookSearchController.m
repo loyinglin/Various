@@ -126,6 +126,7 @@
     
     CookSearchData* data = [self.myViewModel getDataByIndex:indexPath.row];
     self.myMessage = data.message;
+    [self.mySearchController setActive:NO];
     
     [self performSegueWithIdentifier:@"search_detail_board" sender:self];
     

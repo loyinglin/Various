@@ -12,7 +12,7 @@
 
 @property (nonatomic , strong) NSString* title;
 @property (nonatomic , strong) NSNumber* id;
-
+@property (nonatomic , strong) NSString* cookclass;
 @end
 
 
@@ -28,7 +28,7 @@
 
 #pragma mark - set
 
-- (void)requestCategoryWithId:(long)categoryId;
+- (void)requestCategoryRoot;
 
 - (void)requestUpdateCategoryByIndex:(long)index;
 
@@ -46,6 +46,10 @@
 
 
 #pragma mark - message
+
+#pragma mark - core data
+
+
 
 
 @end

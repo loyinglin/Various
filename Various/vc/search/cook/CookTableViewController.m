@@ -31,7 +31,7 @@
     self.myViewModel = [CookViewModel new];
     self.myOpenstatus = [NSMutableDictionary dictionary];
     
-    [self.myViewModel requestCategoryWithId:0];
+    [self.myViewModel requestCategoryRoot];
     [RACObserve(self.myViewModel, myDataArr) subscribeNext:^(id x) {
         [self.tableView reloadData];
     }];
@@ -64,7 +64,16 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView* head = [tableView dequeueReusableCellWithIdentifier:@"head"];
     UILabel* title = (UILabel*)[head viewWithTag:10];
+    UIImageView* imageView = (UIImageView *)[head viewWithTag:20];
     title.text = [self.myViewModel getHeadByIndex:section].title;
+    NSNumber* status = [self.myOpenstatus objectForKey:@(section)];
+    if (status && status.integerValue == 1) {
+        [imageView setImage:[UIImage imageNamed:@"icon_arrow_down"]];
+    }
+    else {
+        [imageView setImage:[UIImage imageNamed:@"icon_arrow_right"]];
+    }
+
     
     UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onOpen:)];
     [head addGestureRecognizer:tap];

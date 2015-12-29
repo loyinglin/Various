@@ -54,10 +54,10 @@
                                    } else {
                                        NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
                                        if (responseCode == 200) {
-                                           NSArray* arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                                          
-                                           NSLog(@"total %ld", arr.count);
-                                           [subscriber sendNext:arr];
+                                           NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                                           if ([dict objectForKey:@"tngou"]) {
+                                               [subscriber sendNext:[dict objectForKey:@"tngou"]];
+                                           }
                                        }
                                    }
                                }];

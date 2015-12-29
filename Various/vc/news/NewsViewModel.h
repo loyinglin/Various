@@ -14,7 +14,7 @@
 @property (nonatomic , strong) NSString* auther;
 @property (nonatomic , strong) NSString* picUrl;
 @property (nonatomic , strong) NSString* url;
-@property (nonatomic , strong) NSString* time;
+@property (nonatomic , strong) NSString* ctime;
 
 @end
 

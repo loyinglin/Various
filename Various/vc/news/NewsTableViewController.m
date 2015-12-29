@@ -96,7 +96,7 @@
     if (data) {
         title.text = data.title;
         desc.text = data.auther;
-        hottime.text = data.time;
+        hottime.text = data.ctime;
         [img setImageWithURL:[[NSURL alloc] initWithString:data.picUrl]];
         
     }

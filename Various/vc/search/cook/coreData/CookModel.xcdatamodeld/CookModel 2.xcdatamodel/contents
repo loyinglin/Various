@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1509" minimumToolsVersion="Xcode 7.0">
+    <entity name="CoreCategoryItem" representedClassName="CoreCategoryItem" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CoreCategoryList" representedClassName="CoreCategoryList" syncable="YES">
+        <relationship name="titleItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreCategoryItem" syncable="YES"/>
+        <relationship name="titleList" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreCategoryItem" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CoreCategoryItem" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="CoreCategoryList" positionX="-18" positionY="45" width="128" height="75"/>
+    </elements>
+</model>

@@ -27,6 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.myTableView.estimatedRowHeight = 200;
+    self.myTableView.rowHeight = UITableViewAutomaticDimension;
+    
     self.myViewModel = [WeixinHotViewModel new];
     // Do any additional setup after loading the view.
     [self refreshTable];
@@ -108,7 +112,12 @@
         desc.text = data.auther;
         hottime.text = data.hottime;
         [img setImageWithURL:[[NSURL alloc] initWithString:data.picUrl]];
-        
+//        
+//        [cell setNeedsLayout];
+//        [cell layoutIfNeeded];
+    }
+    else {
+        NSLog(@"error");
     }
     
     return cell;
