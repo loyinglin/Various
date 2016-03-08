@@ -85,6 +85,7 @@
 		FD82965B1C1509670016F7B7 /* SearchGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD82965A1C1509670016F7B7 /* SearchGameController.m */; };
 		FD8296601C150A290016F7B7 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = FD82965D1C150A290016F7B7 /* Cell.m */; };
 		FD8296611C150A290016F7B7 /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FD82965F1C150A290016F7B7 /* CircleLayout.m */; };
+		FD8C72741C8EA302001A5D46 /* LYhttpAPICenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FD8C72731C8EA302001A5D46 /* LYhttpAPICenter.m */; };
 		FDA74C321C0699ED00C72D4E /* VariousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C311C0699ED00C72D4E /* VariousTests.m */; };
 		FDA74C3D1C0699ED00C72D4E /* VariousUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C3C1C0699ED00C72D4E /* VariousUITests.m */; };
 		FDA74C5A1C069B6500C72D4E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA74C511C069B6500C72D4E /* AppDelegate.m */; };
@@ -247,6 +248,8 @@
 		FD82965D1C150A290016F7B7 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
 		FD82965E1C150A290016F7B7 /* CircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayout.h; sourceTree = "<group>"; };
 		FD82965F1C150A290016F7B7 /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
+		FD8C72721C8EA302001A5D46 /* LYhttpAPICenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYhttpAPICenter.h; sourceTree = "<group>"; };
+		FD8C72731C8EA302001A5D46 /* LYhttpAPICenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYhttpAPICenter.m; sourceTree = "<group>"; };
 		FDA74C111C0699EC00C72D4E /* Various.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Various.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C2D1C0699ED00C72D4E /* VariousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VariousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA74C311C0699ED00C72D4E /* VariousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VariousTests.m; sourceTree = "<group>"; };
@@ -584,6 +587,8 @@
 		FDA74C4C1C069B6500C72D4E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FD8C72721C8EA302001A5D46 /* LYhttpAPICenter.h */,
+				FD8C72731C8EA302001A5D46 /* LYhttpAPICenter.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -876,6 +881,7 @@
 				FD82965B1C1509670016F7B7 /* SearchGameController.m in Sources */,
 				FD009F1F1C09509600295FD7 /* EGORefreshTableHeaderView.m in Sources */,
 				FD29B2DA1C0EC9CA00B68C6C /* CookDetailController.m in Sources */,
+				FD8C72741C8EA302001A5D46 /* LYhttpAPICenter.m in Sources */,
 				FDA74C5F1C069B6500C72D4E /* main.m in Sources */,
 				FD3C43401C0BED7600A2BC67 /* GirlViewModel.m in Sources */,
 				FD3C42E41C0A92D300A2BC67 /* IndexTabbarController.m in Sources */,

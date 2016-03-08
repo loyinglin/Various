@@ -7,6 +7,7 @@
 //
 
 #import "TranslateViewModel.h"
+#import "LYhttpAPICenter.h"
 
 @implementation TranslateViewModel
 
@@ -26,9 +27,29 @@
         
         NSString *httpUrl = @"http://apis.baidu.com/apistore/tranlateservice/translate";
         NSString *httpArg = [NSString stringWithFormat:@"query=%@&from=%@&to=%@", text, from, to];
-        
         NSString *urlStr = [[NSString alloc]initWithFormat: @"%@?%@", httpUrl, httpArg];
         urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+        [[LYhttpAPICenter instance] lySendRequestWithGET:httpUrl Param:@{@"query":text, @"from":from, @"to":to} Sucess:^(NSDictionary* dict) {
+            NSNumber* result = [dict objectForKey:@"errNum"];
+            if ([result integerValue] == 0) {
+                NSDictionary* retData = [dict objectForKey:@"retData"];
+                NSArray* arr = [retData objectForKey:@"trans_result"];
+                NSString* dst = [(NSDictionary*)arr[0] objectForKey:@"dst"];
+                if (dst && [dst isKindOfClass:[NSString class]]) {
+                    [subscriber sendNext:dst];
+                }
+                [subscriber sendCompleted];
+            }
+            else {
+                NSLog(@"error");
+                [subscriber sendCompleted];
+                //                                               [subscriber sendError:codeError];
+            }
+
+        }];
+        return nil;
+        
         NSURL *url = [NSURL URLWithString: urlStr];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];
         [request setHTTPMethod: @"GET"];

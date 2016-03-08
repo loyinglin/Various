@@ -7,6 +7,7 @@
 //
 
 #import "IndexTabbarController.h"
+#import "LYhttpAPICenter.h"
 
 @interface IndexTabbarController ()
 
@@ -19,6 +20,8 @@
     // Do any additional setup after loading the view.
 //    self.navigationController.navigationBar.hidden = YES;
     [self.tabBar setTintColor:[UIColor blackColor]];
+    
+    [self customAPI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,5 +42,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)customAPI {
+    [[LYhttpAPICenter instance] setAPINotNetworkBlock:^{
+        NSLog(@"ABC");
+    }];
+    [[LYhttpAPICenter instance] setRequestHeadWithDict:@{@"apikey":@"d233f5dfd98c24f5d9e595af6e5c9fac"}];
+    
+    [[LYhttpAPICenter instance] setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript", @"text/plain", nil]];
+}
 
 @end
