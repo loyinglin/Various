@@ -27,7 +27,23 @@ typedef void(^LYhttpAPIFailBlock)(NSError* error);
 
 @end
 
-
+/**
+  http请求中心
+  1、统一的http错误处理，在 setAPIFailBlock:(LYhttpAPIFailBlock)block
+ 
+  2、统一的业务逻辑错误处理，在 setAPIStatusOKBlock:(LYhttpAPIStatusOKBlock)block
+ 
+  3、请求发起先会进行统一网络判断，无网络处理在 setAPINotNetworkBlock:(LYhttpAPINotNetworkBlock)block
+ 
+  4、统一的http请求头，在 setRequestHeadWithDict:(NSDictionary *)dict
+ 
+  5、统一的http响应接受类型，在 setAcceptableContentTypes:(NSSet *)set
+ 
+##待扩展
+ 
+ 对于每一条请求，都用一个类进行封装。
+ 类定义了，请求类型（get、post、upload），请求头的获取；响应头的获取；url地址获取；参数获取；成功、失败回调；进度条；
+ */
 @interface LYhttpAPICenter : NSObject
 
 + (instancetype)instance;
@@ -49,6 +65,10 @@ typedef void(^LYhttpAPIFailBlock)(NSError* error);
 #pragma mark - http
 - (void)lySendRequestWithPost:(NSString *)URLString Param:(NSDictionary *)param Sucess:(LYhttpAPISuccessBlock)successBlock;
 
+- (void)lySendRequestWithPost:(NSString *)URLString Param:(NSDictionary *)param Sucess:(LYhttpAPISuccessBlock)successBlock Fail:(LYhttpAPIFailBlock)failBlock;
+
 - (void)lySendRequestWithGET:(NSString *)URLString  Param:(NSDictionary *)param Sucess:(LYhttpAPISuccessBlock)successBlock;
+
+- (void)lySendRequestWithGET:(NSString *)URLString  Param:(NSDictionary *)param Sucess:(LYhttpAPISuccessBlock)successBlock Fail:(LYhttpAPIFailBlock)failBlock;
 
 @end

@@ -71,19 +71,27 @@
 #pragma http
 
 - (void)lySendRequestWithGET:(NSString *)URLString  Param:(NSDictionary *)param Sucess:(LYhttpAPISuccessBlock)successBlock {
-    [self requestWithMethod:@"GET" URL:URLString parameters:param progress:nil success:successBlock];
+    [self requestWithMethod:@"GET" URL:URLString parameters:param progress:nil success:successBlock failure:nil];
 }
 
+- (void)lySendRequestWithGET:(NSString *)URLString Param:(NSDictionary *)param Sucess:(LYhttpAPISuccessBlock)successBlock Fail:(LYhttpAPIFailBlock)failBlock {
+    [self requestWithMethod:@"GET" URL:URLString parameters:param progress:nil success:successBlock failure:failBlock];
+}
 
 
 - (void)lySendRequestWithPost:(NSString *)URLString Param:(NSDictionary *)param Sucess:(LYhttpAPISuccessBlock)successBlock{
-    [self requestWithMethod:@"POST" URL:URLString parameters:param progress:nil success:successBlock];
+    [self requestWithMethod:@"POST" URL:URLString parameters:param progress:nil success:successBlock failure:nil];
+}
+
+- (void)lySendRequestWithPost:(NSString *)URLString Param:(NSDictionary *)param Sucess:(LYhttpAPISuccessBlock)successBlock Fail:(LYhttpAPIFailBlock)failBlock {
+    [self requestWithMethod:@"POST" URL:URLString parameters:param progress:nil success:successBlock failure:failBlock];
 }
 
 - (void)requestWithMethod:(NSString *)method URL:(NSString *)URLString
-  parameters:(id)parameters
-    progress:(void (^)(NSProgress * _Nonnull))uploadProgress
-     success:(void (^)(id _Nullable))success {
+               parameters:(id)parameters
+                 progress:(void (^)(NSProgress * _Nonnull))uploadProgress
+                  success:(void (^)(id _Nullable))success
+                  failure:(void (^)(NSError* _Nonnull))failure{
     if (![self lyNetworkReachable]) {
         if (self.myNotNetworkBlock) { //没有网络
             self.myNotNetworkBlock();
@@ -103,6 +111,9 @@
     void (^innerFailBlock)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) = ^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (self.myFailBlock) {
             self.myFailBlock(error);
+        }
+        if (failure) {
+            failure(error);
         }
     };
 

@@ -44,51 +44,11 @@
             else {
                 NSLog(@"error");
                 [subscriber sendCompleted];
-                //                                               [subscriber sendError:codeError];
             }
 
+        } Fail:^(NSError *error) {
+            [subscriber sendCompleted];
         }];
-        return nil;
-        
-        NSURL *url = [NSURL URLWithString: urlStr];
-        NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];
-        [request setHTTPMethod: @"GET"];
-        [request addValue: @"d233f5dfd98c24f5d9e595af6e5c9fac" forHTTPHeaderField: @"apikey"];
-        [NSURLConnection sendAsynchronousRequest: request
-                                           queue: [NSOperationQueue mainQueue]
-                               completionHandler: ^(NSURLResponse *response, NSData *data, NSError *error){
-                                   if (error) {
-                                       NSLog(@"error");
-                                       [subscriber sendCompleted];
-                                   } else {
-                                       NSInteger responseCode = [(NSHTTPURLResponse *)response statusCode];
-                                       if (responseCode == 200) {
-                                           NSDictionary* dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                                           NSNumber* result = [dict objectForKey:@"errNum"];
-                                           if ([result integerValue] == 0) {
-                                               NSDictionary* retData = [dict objectForKey:@"retData"];
-                                               NSArray* arr = [retData objectForKey:@"trans_result"];
-                                               NSString* dst = [(NSDictionary*)arr[0] objectForKey:@"dst"];
-                                               if (dst && [dst isKindOfClass:[NSString class]]) {
-                                                   [subscriber sendNext:dst];
-                                               }
-                                               [subscriber sendCompleted];
-                                           }
-                                           else {
-                                               NSLog(@"error");
-                                               [subscriber sendCompleted];
-//                                               [subscriber sendError:codeError];
-                                           }
-                                           
-                                       }
-                                       else{
-                                           NSLog(@"error");
-                                           [subscriber sendCompleted];
-//                                           [subscriber sendError:apiError];
-                                       }
-                                   }
-                               }];
-        
         return nil;
     }];
 }
