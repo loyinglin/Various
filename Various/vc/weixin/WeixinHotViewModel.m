@@ -59,6 +59,7 @@
     @weakify(self);
     [[[RACSignal startLazilyWithScheduler:[RACScheduler currentScheduler] block:^(id<RACSubscriber> subscriber) {
         
+        //可以把网络部分抽离，成为单独的business 或者 module 从而模块化
         NSString *httpUrl = @"http://api.huceo.com/wxnew/other";
         NSString *httpArg;
         
