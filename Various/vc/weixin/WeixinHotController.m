@@ -47,11 +47,6 @@
          return @(value.on);
      }];
     
-//    [[self rac_signalForSelector:@selector(tableView:willSelectRowAtIndexPath:) fromProtocol:@protocol(UITableViewDelegate)] subscribeNext:^(id x) {
-//        NSLog(@"test%@", x);
-//    }];
-
-    
     [self.myViewModel updateHotData];
 }
 
@@ -60,15 +55,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 #pragma mark - view init
 
@@ -85,7 +71,6 @@
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
         LYBaseWebViewController* controller = segue.destinationViewController;
         controller.myWebUrl = self.myDetailUrl;
-        //        controller.hidesBottomBarWhenPushed = YES;
     }
 }
 
@@ -95,9 +80,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.myViewModel getDataCount];
 }
-
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
@@ -112,9 +94,6 @@
         desc.text = data.auther;
         hottime.text = data.hottime;
         [img setImageWithURL:[[NSURL alloc] initWithString:data.picUrl]];
-//        
-//        [cell setNeedsLayout];
-//        [cell layoutIfNeeded];
     }
     else {
         NSLog(@"error");
@@ -158,9 +137,7 @@
 - (void) refreshTable
 {
     /*
-     
      Code to actually refresh goes here.
-     
      */
     
     [self.myTableView reloadData]; //应该紧接着 否则在下面的状态改变会有bug

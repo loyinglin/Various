@@ -74,7 +74,7 @@
         NSURL *url = [NSURL URLWithString: urlStr];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url cachePolicy: NSURLRequestUseProtocolCachePolicy timeoutInterval: 10];
         [request setHTTPMethod: @"GET"];
-//        [request addValue: @"f4e2a3fc734cd04539610ddff313925f" forHTTPHeaderField: @"key"];
+
         [NSURLConnection sendAsynchronousRequest: request
                                            queue: [NSOperationQueue mainQueue]
                                completionHandler: ^(NSURLResponse *response, NSData *data, NSError *error){
