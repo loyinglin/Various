@@ -28,6 +28,8 @@
 		FD009F2B1C09509600295FD7 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD009F1E1C09509600295FD7 /* whiteArrow@2x.png */; };
 		FD009F2E1C09513000295FD7 /* WeixinHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD009F2D1C09513000295FD7 /* WeixinHotController.m */; };
 		FD009F301C0972DC00295FD7 /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD009F2F1C0972DC00295FD7 /* libPods-AFNetworking.a */; };
+		FD0F49A71CB64CDE00C2155E /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F49A61CB64CDE00C2155E /* TranslateViewController.swift */; };
+		FD0F49A91CB652FE00C2155E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F49A81CB652FE00C2155E /* SearchViewController.swift */; };
 		FD29B2C71C0D509200B68C6C /* LYBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2C61C0D509200B68C6C /* LYBaseWebViewController.m */; };
 		FD29B2CB1C0D9AB600B68C6C /* CookTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2CA1C0D9AB600B68C6C /* CookTableViewController.m */; };
 		FD29B2D11C0DA9BD00B68C6C /* CookViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2D01C0DA9BD00B68C6C /* CookViewModel.m */; };
@@ -151,6 +153,9 @@
 		FD009F2C1C09513000295FD7 /* WeixinHotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinHotController.h; sourceTree = "<group>"; };
 		FD009F2D1C09513000295FD7 /* WeixinHotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinHotController.m; sourceTree = "<group>"; };
 		FD009F2F1C0972DC00295FD7 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/../build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
+		FD0F49A51CB64CDE00C2155E /* Various-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Various-Bridging-Header.h"; sourceTree = "<group>"; };
+		FD0F49A61CB64CDE00C2155E /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
+		FD0F49A81CB652FE00C2155E /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FD29B2C51C0D509200B68C6C /* LYBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYBaseWebViewController.h; sourceTree = "<group>"; };
 		FD29B2C61C0D509200B68C6C /* LYBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYBaseWebViewController.m; sourceTree = "<group>"; };
 		FD29B2C91C0D9AB600B68C6C /* CookTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookTableViewController.h; sourceTree = "<group>"; };
@@ -500,6 +505,8 @@
 				FD3C43761C0D424600A2BC67 /* TranslateViewController.m */,
 				FD3C43781C0D42BA00A2BC67 /* TranslateViewModel.h */,
 				FD3C43791C0D42BA00A2BC67 /* TranslateViewModel.m */,
+				FD0F49A61CB64CDE00C2155E /* TranslateViewController.swift */,
+				FD0F49A51CB64CDE00C2155E /* Various-Bridging-Header.h */,
 			);
 			path = translate;
 			sourceTree = "<group>";
@@ -647,6 +654,7 @@
 				FD3C43741C0D423100A2BC67 /* translate */,
 				FDA74C611C069E4400C72D4E /* SearchViewController.h */,
 				FDA74C621C069E4400C72D4E /* SearchViewController.m */,
+				FD0F49A81CB652FE00C2155E /* SearchViewController.swift */,
 				FDA74C641C069E6200C72D4E /* SearchTableViewCell.h */,
 				FDA74C651C069E6200C72D4E /* SearchTableViewCell.m */,
 				FD009EF31C06AF7700295FD7 /* SearchPhoneController.h */,
@@ -882,6 +890,7 @@
 				FD3C42E41C0A92D300A2BC67 /* IndexTabbarController.m in Sources */,
 				FD29B2C71C0D509200B68C6C /* LYBaseWebViewController.m in Sources */,
 				FD3C43301C0B08A400A2BC67 /* LYTypeEncoding.m in Sources */,
+				FD0F49A71CB64CDE00C2155E /* TranslateViewController.swift in Sources */,
 				FD3C43651C0C00FC00A2BC67 /* MJRefreshHeaderView.m in Sources */,
 				FD3C43621C0C00FC00A2BC67 /* MJRefreshBaseView.m in Sources */,
 				FD009F211C09509600295FD7 /* MessageInterceptor.m in Sources */,
@@ -901,6 +910,7 @@
 				FD009F051C080BBD00295FD7 /* SearchExpressViewModel.m in Sources */,
 				FD29B2D11C0DA9BD00B68C6C /* CookViewModel.m in Sources */,
 				FD3C437A1C0D42BA00A2BC67 /* TranslateViewModel.m in Sources */,
+				FD0F49A91CB652FE00C2155E /* SearchViewController.swift in Sources */,
 				FD8296601C150A290016F7B7 /* Cell.m in Sources */,
 				FD009F021C06D96000295FD7 /* SearchExpressController.m in Sources */,
 				FD3C43291C0AFBE100A2BC67 /* WeixinHotViewModel.m in Sources */,
@@ -1071,6 +1081,7 @@
 			baseConfigurationReference = 143D1289DF492F37F11C6BD9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1086,6 +1097,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.Various;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0d8f46a3-b2dd-4f9c-a1d5-5aa8311c8d50";
+				SWIFT_OBJC_BRIDGING_HEADER = "Various/vc/search/translate/Various-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1094,6 +1107,7 @@
 			baseConfigurationReference = BC30FBF7877E4097940F6FD0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1108,6 +1122,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = loying.lin.Various;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0d8f46a3-b2dd-4f9c-a1d5-5aa8311c8d50";
+				SWIFT_OBJC_BRIDGING_HEADER = "Various/vc/search/translate/Various-Bridging-Header.h";
 			};
 			name = Release;
 		};
