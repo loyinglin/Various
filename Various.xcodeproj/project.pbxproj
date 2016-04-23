@@ -28,6 +28,8 @@
 		FD009F2B1C09509600295FD7 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD009F1E1C09509600295FD7 /* whiteArrow@2x.png */; };
 		FD009F2E1C09513000295FD7 /* WeixinHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD009F2D1C09513000295FD7 /* WeixinHotController.m */; };
 		FD009F301C0972DC00295FD7 /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD009F2F1C0972DC00295FD7 /* libPods-AFNetworking.a */; };
+		FD08A46E1CC4E32F0020F861 /* WeinDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD08A46C1CC4E32F0020F861 /* WeinDetailController.m */; };
+		FD08A46F1CC4E32F0020F861 /* WeinDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD08A46D1CC4E32F0020F861 /* WeinDetailController.xib */; };
 		FD0F49A71CB64CDE00C2155E /* TranslateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F49A61CB64CDE00C2155E /* TranslateViewController.swift */; };
 		FD0F49A91CB652FE00C2155E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F49A81CB652FE00C2155E /* SearchViewController.swift */; };
 		FD29B2C71C0D509200B68C6C /* LYBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2C61C0D509200B68C6C /* LYBaseWebViewController.m */; };
@@ -51,6 +53,7 @@
 		FD29B2F91C0FD88500B68C6C /* CookSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2F81C0FD88500B68C6C /* CookSearchController.m */; };
 		FD29B2FC1C0FE83400B68C6C /* CookSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2FB1C0FE83400B68C6C /* CookSearchViewModel.m */; };
 		FD29B2FF1C10069A00B68C6C /* CookSearchDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD29B2FE1C10069A00B68C6C /* CookSearchDetailController.m */; };
+		FD321CE81CC6243800998CED /* UINavigationItem+MRCBackBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FD321CE71CC6243800998CED /* UINavigationItem+MRCBackBarButtonItem.m */; };
 		FD3C42E41C0A92D300A2BC67 /* IndexTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C42E31C0A92D300A2BC67 /* IndexTabbarController.m */; };
 		FD3C43291C0AFBE100A2BC67 /* WeixinHotViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C43281C0AFBE100A2BC67 /* WeixinHotViewModel.m */; };
 		FD3C432D1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FD3C432C1C0AFECF00A2BC67 /* NSDictionary+LYDictToObject.m */; };
@@ -153,6 +156,9 @@
 		FD009F2C1C09513000295FD7 /* WeixinHotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinHotController.h; sourceTree = "<group>"; };
 		FD009F2D1C09513000295FD7 /* WeixinHotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeixinHotController.m; sourceTree = "<group>"; };
 		FD009F2F1C0972DC00295FD7 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/../build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
+		FD08A46B1CC4E32F0020F861 /* WeinDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeinDetailController.h; sourceTree = "<group>"; };
+		FD08A46C1CC4E32F0020F861 /* WeinDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeinDetailController.m; sourceTree = "<group>"; };
+		FD08A46D1CC4E32F0020F861 /* WeinDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeinDetailController.xib; sourceTree = "<group>"; };
 		FD0F49A51CB64CDE00C2155E /* Various-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Various-Bridging-Header.h"; sourceTree = "<group>"; };
 		FD0F49A61CB64CDE00C2155E /* TranslateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateViewController.swift; sourceTree = "<group>"; };
 		FD0F49A81CB652FE00C2155E /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +192,8 @@
 		FD29B2FB1C0FE83400B68C6C /* CookSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookSearchViewModel.m; sourceTree = "<group>"; };
 		FD29B2FD1C10069A00B68C6C /* CookSearchDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookSearchDetailController.h; sourceTree = "<group>"; };
 		FD29B2FE1C10069A00B68C6C /* CookSearchDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookSearchDetailController.m; sourceTree = "<group>"; };
+		FD321CE61CC6243800998CED /* UINavigationItem+MRCBackBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+MRCBackBarButtonItem.h"; sourceTree = "<group>"; };
+		FD321CE71CC6243800998CED /* UINavigationItem+MRCBackBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+MRCBackBarButtonItem.m"; sourceTree = "<group>"; };
 		FD3C42E21C0A92D300A2BC67 /* IndexTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexTabbarController.h; sourceTree = "<group>"; };
 		FD3C42E31C0A92D300A2BC67 /* IndexTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTabbarController.m; sourceTree = "<group>"; };
 		FD3C43271C0AFBE100A2BC67 /* WeixinHotViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeixinHotViewModel.h; sourceTree = "<group>"; };
@@ -336,6 +344,9 @@
 			children = (
 				FD009F2C1C09513000295FD7 /* WeixinHotController.h */,
 				FD009F2D1C09513000295FD7 /* WeixinHotController.m */,
+				FD08A46B1CC4E32F0020F861 /* WeinDetailController.h */,
+				FD08A46C1CC4E32F0020F861 /* WeinDetailController.m */,
+				FD08A46D1CC4E32F0020F861 /* WeinDetailController.xib */,
 				FD3C43271C0AFBE100A2BC67 /* WeixinHotViewModel.h */,
 				FD3C43281C0AFBE100A2BC67 /* WeixinHotViewModel.m */,
 				FD3C43371C0B0DFE00A2BC67 /* WeixinRootController.h */,
@@ -430,6 +441,8 @@
 		FD3C432A1C0AFECF00A2BC67 /* LYCategory */ = {
 			isa = PBXGroup;
 			children = (
+				FD321CE61CC6243800998CED /* UINavigationItem+MRCBackBarButtonItem.h */,
+				FD321CE71CC6243800998CED /* UINavigationItem+MRCBackBarButtonItem.m */,
 				FD3C43311C0B08BD00A2BC67 /* NSObject+LYTypeConversion.h */,
 				FD3C43321C0B08BD00A2BC67 /* NSObject+LYTypeConversion.m */,
 				FD3C432E1C0B08A400A2BC67 /* LYTypeEncoding.h */,
@@ -823,6 +836,7 @@
 				FD29B2F31C0ED9B200B68C6C /* 58.png in Resources */,
 				FDA74C5C1C069B6500C72D4E /* LaunchScreen.storyboard in Resources */,
 				FD54DDD21C231CBF009A8AD5 /* tab_finance_normal@2x.png in Resources */,
+				FD08A46F1CC4E32F0020F861 /* WeinDetailController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -901,6 +915,7 @@
 				FD3C43671C0C00FC00A2BC67 /* UIScrollView+MJRefresh.m in Sources */,
 				FD29B2CB1C0D9AB600B68C6C /* CookTableViewController.m in Sources */,
 				FD3C43391C0B0DFE00A2BC67 /* WeixinRootController.m in Sources */,
+				FD321CE81CC6243800998CED /* UINavigationItem+MRCBackBarButtonItem.m in Sources */,
 				FD3C43361C0B0DC300A2BC67 /* SearchRootController.m in Sources */,
 				FD009F201C09509600295FD7 /* LoadMoreTableFooterView.m in Sources */,
 				FDEC5EDF1C32653200D85E3F /* CoreCategoryItem.m in Sources */,
@@ -921,6 +936,7 @@
 				FD69A1681C326962002A458F /* CoreCategoryList.m in Sources */,
 				FD009F2E1C09513000295FD7 /* WeixinHotController.m in Sources */,
 				FD29B2FC1C0FE83400B68C6C /* CookSearchViewModel.m in Sources */,
+				FD08A46E1CC4E32F0020F861 /* WeinDetailController.m in Sources */,
 				FD3C43631C0C00FC00A2BC67 /* MJRefreshConst.m in Sources */,
 				FD29B2F91C0FD88500B68C6C /* CookSearchController.m in Sources */,
 				FD3C436C1C0D354500A2BC67 /* NewsTableViewController.m in Sources */,

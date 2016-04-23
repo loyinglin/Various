@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "PullTableView.h"
 
-@interface WeixinHotController : UIViewController<PullTableViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface WeixinHotController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end

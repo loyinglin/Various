@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa.h>
 
 @interface WeixinHotData : NSObject
 
@@ -18,6 +19,11 @@
 
 @end
 
+typedef NS_ENUM(int, TYPE_COMMAND){
+    command_type_load_more = 0,
+    command_type_refresh = 1
+};
+
 
 @interface WeixinHotViewModel : NSObject
 
@@ -25,22 +31,17 @@
 
 @property (nonatomic) NSNumber* myRand;
 
+@property (nonatomic , strong) RACCommand* myCommand;
+
+@property (nonatomic , strong) RACSignal* myRefreshSignal;
+
 #pragma mark - init
 
 + (instancetype)instance;
 
 #pragma mark - set
 
-/**
- *  重新获取最新的
- */
-- (void)updateHotData;
 
-
-/**
- *  加载下一页
- */
-- (void)loadMoreData;
 #pragma mark - get
 
 - (long)getDataCount;

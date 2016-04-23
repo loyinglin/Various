@@ -10,9 +10,13 @@
 #import "UIImageView+AFNetworking.h"
 #import "LYBaseWebViewController.h"
 #import "WeixinHotViewModel.h"
+#import "WeinDetailController.h"
+
+#import <MBProgressHUD.h>
 #import <ReactiveCocoa.h>
 
-@interface WeixinHotController ()
+
+@interface WeixinHotController () <PullTableViewDelegate>
 
 @property (nonatomic , strong) IBOutlet PullTableView*  myTableView;
 
@@ -35,9 +39,10 @@
     // Do any additional setup after loading the view.
     [self refreshTable];
     
-    
+    @weakify(self)
     [RACObserve(self.myViewModel, myDataArr) subscribeNext:^(id x) {
-        NSLog(@"update");
+        @strongify(self)
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         [self refreshTable];
     }];
     
@@ -47,8 +52,27 @@
          return @(value.on);
      }];
     
-    [self.myViewModel updateHotData];
+    [self.myViewModel.myCommand execute:@(command_type_refresh)];
+    
+
+    //MARK: PullTableViewDelegate
+    [[self rac_signalForSelector:@selector(pullTableViewDidTriggerLoadMore:) fromProtocol:@protocol(PullTableViewDelegate)] subscribeNext:^(id x) {
+        @strongify(self)
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES].labelText = @"加载中..";
+        [self.myViewModel.myCommand execute:@(command_type_load_more)];
+        
+//        WeinDetailController* controller = [[WeinDetailController alloc] init];
+//        [self presentViewController:controller animated:YES completion:nil];
+    }];
+    
+    [[self rac_signalForSelector:@selector(pullTableViewDidTriggerRefresh:) fromProtocol:@protocol(PullTableViewDelegate)] subscribeNext:^(id x) {
+        @strongify(self)
+//        [self.myViewModel updateHotData];
+        [self.myViewModel.myCommand execute:@(command_type_refresh)];
+    }];
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -62,7 +86,15 @@
     NSLog(@"%@ dealloc", self);
 }
 
-#pragma mark - ibaction
+#pragma mark - 
+
+- (void)refreshTable {
+    [self.myTableView reloadData]; //应该紧接着 否则在下面的状态改变会有bug
+    self.myTableView.pullLastRefreshDate = [NSDate date];
+    self.myTableView.pullTableIsRefreshing = NO;
+    self.myTableView.pullTableIsLoadingMore = NO;
+
+}
 
 #pragma mark - ui
 
@@ -119,32 +151,6 @@
     return nil;
 }
 
-
-
-#pragma mark - PullTableViewDelegate
-
-- (void)pullTableViewDidTriggerRefresh:(PullTableView *)pullTableView
-{
-    [self.myViewModel updateHotData];
-    
-}
-
-- (void)pullTableViewDidTriggerLoadMore:(PullTableView *)pullTableView
-{
-    [self.myViewModel loadMoreData];
-}
-
-- (void) refreshTable
-{
-    /*
-     Code to actually refresh goes here.
-     */
-    
-    [self.myTableView reloadData]; //应该紧接着 否则在下面的状态改变会有bug
-    self.myTableView.pullLastRefreshDate = [NSDate date];
-    self.myTableView.pullTableIsRefreshing = NO;
-    self.myTableView.pullTableIsLoadingMore = NO;
-}
 
 #pragma mark - notify
 
